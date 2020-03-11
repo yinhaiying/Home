@@ -1,0 +1,23 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "个人主页",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinhaiying/Home.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yinhaiying/Home/issues"
+  },
+  "homepage": "https://github.com/yinhaiying/Home#readme"
+}
