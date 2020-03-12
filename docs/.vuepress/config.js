@@ -1,7 +1,7 @@
 module.exports = {
+  base:"/Home/",
   title: '海鹰斯坦的个人主页',
   description: '111Just playing around',
-  base:"/Home/",
   themeConfig: {
     logo: '/assets/logo.jpg',
     nav: [
