@@ -77,6 +77,16 @@ module.exports = {
             ],
           ]
         },
+        {
+          "name": "ts",
+          "title": "ts",
+          "collabsable": false,
+          "children": [
+            ["ts/", "目录"],
+            ["ts/ts001","【001】数据类型"],
+            ["ts/ts002","【002】函数"],
+          ]
+        },
         ['node','node'],
         ['vue','vue'],
         ['react','react'],

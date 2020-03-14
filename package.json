@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/yinhaiying/Home/issues"
   },
-  "homepage": "https://github.com/yinhaiying/Home#readme"
+  "homepage": "https://github.com/yinhaiying/Home#readme",
+  "devDependencies": {
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.36.0"
+  },
+  "dependencies": {
+    "fibers": "^4.0.2"
+  }
 }
