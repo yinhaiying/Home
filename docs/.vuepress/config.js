@@ -68,8 +68,8 @@ module.exports = {
               "目录"
             ],
             [
-              "js/js1",
-              "这是第一篇关于js的"
+              "js/js001",
+              "【001】getter&&setter"
             ],
             [
               "js/js2",
