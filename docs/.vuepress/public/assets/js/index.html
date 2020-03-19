@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.defineProperty</title>
+</head>
+<body>
+    <script>
+        // let data = {
+        //     n:0
+        // }
+
+        // 需求一：对对象的赋值进行限制:
+        // let count = 0;
+        // let data = {
+        //     get n(){
+        //       return count;
+        //     },
+        //     set n(value){
+        //         if(value < 0){
+        //             throw new Error('n不能设置为小于0');
+        //             return;
+        //         }
+        //         count = value;
+        //     }
+        // }
+        // console.log(data);
+        // data.n = -1;
+
+        // 如何为对象添加新的属性
+        // let data = {};
+        // let count = 0;
+        // Object.defineProperty(data,'n',{
+        //     get(){
+        //         return count;
+        //     },
+        //     set(value){
+        //         if(value < 0){
+        //             throw new Error('n不能设置为小于0');
+        //             return;
+        //         }
+        //         count = value;
+        //     }
+        // });
+
+        // console.log(data);
+        // data.n = -1;
+
+
+        // 避免用户绕开限制，直接修改对象属性  
+        // let data = {};
+        // let myData = {
+        //     n:0
+        // };
+        // Object.defineProperty(data,'n',{
+        //     get(){
+        //         return myData.n;
+        //     },
+        //     set(value){
+        //         if(value < 0){
+        //             throw new Error('n不能设置为小于0');
+        //             return;
+        //         }
+        //         myData.n = value;
+        //     }
+        // });
+        // console.log(data);
+        // myData.n = -1;
+        // console.log(`data中n的值为${data.n}`);
+
+        
+        // 解决方式一：使用代理
+        // 使用匿名对象
+        // let data = proxy({myData:{n:0}});
+        // function proxy({myData}){
+        //     let obj = {};
+        //     Object.defineProperty(obj,'n',{
+        //     get(){
+        //         return data.n;
+        //     },
+        //     set(value){
+        //         if(value < 0){
+        //             throw new Error('n不能设置为小于0');
+        //             return;
+        //         }
+        //         myData.n = value;
+        //     }
+        // });
+        //     return obj
+        // }
+        // console.log(data);
+        // data.n = -1;
+        
+        // 解决方式二：再次使用Object.defineProperty对数据进行拦截
+        let myData = {
+            n:0
+        };
+        let data = proxy({data:myData});
+        function proxy({data}){
+            let value = data.n; 
+            delete data.n;  // 删除原来的n
+            // 对属性n进行拦截
+            Object.defineProperty(data,'n',{
+                get(){
+                    return value;
+                },
+                set(newValue){
+                    if(newValue < 0){
+                        throw new Error('n不能设置为小于0');
+                        return;
+                    }
+                    value = newValue;
+                }
+            });
+            // 代理返回一个新的对象
+            return data;
+        }
+        console.log(data);
+        console.log('111');
+        myData.n = -1;  // 报错
+        console.log(data.n);
+
+    </script>
+</body>
+</html>

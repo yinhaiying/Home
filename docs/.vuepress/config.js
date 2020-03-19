@@ -15,6 +15,7 @@ module.exports = {
       { text: '面试', link: '/interview/' },
       { text: 'Leetcode', link: '/leetcode/' },
       { text: '常用网站', link: '/other-site/' },
+      { text: '常用工具', link: '/tools/' },
     ],
     sidebarDepth: 2,
     sidebar:{
@@ -72,8 +73,8 @@ module.exports = {
               "【001】getter&&setter"
             ],
             [
-              "js/js2",
-              "这是第二篇关于js的"
+              "js/js002",
+              "【002】Object.defineProperty"
             ],
           ]
         },
@@ -98,6 +99,17 @@ module.exports = {
         ['computer-net','计算机网络'],
         ['operate-system','操作系统']
       ],
+      '/tools/':[
+        {
+          "name": "tools",
+          "title": "常用工具",
+          "collabsable": false,
+          "children": [
+            ["", "目录"],
+            ["tools001","【001】强大的Fiddler"],
+          ]
+        },
+      ]
     },
   },
 
