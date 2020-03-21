@@ -94,6 +94,15 @@ module.exports = {
         ['vue','vue'],
         ['react','react'],
         ['webpack','webpack'],
+        {
+          "name": "wechat",
+          "title": "微信公众号及小程序",
+          "collabsable": false,
+          "children": [
+            ["wechat/", "目录"],
+            ["wechat/wechat001","【001】redirect_uri参数错误"],
+          ]
+        },
       ],
       '/computer-foundation/':[
         ['computer-net','计算机网络'],
