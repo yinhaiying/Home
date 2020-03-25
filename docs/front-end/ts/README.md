@@ -14,4 +14,5 @@ p{
 <div class = "line"><a href = "/Home/front-end/ts/ts002">【002】函数</a></div>
 <div class = "line"><a href = "/Home/front-end/ts/ts003">【003】接口</a></div>
 <div class = "line"><a href = "/Home/front-end/ts/ts004">【004】类</a></div>
+<div class = "line"><a href = "/Home/front-end/ts/ts005">【005】泛型</a></div>
 
