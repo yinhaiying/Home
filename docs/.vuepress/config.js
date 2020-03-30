@@ -1,6 +1,7 @@
 const computerFoundation = require('./sidebar/computer-foundation.js');
 const frontEnd = require('./sidebar/front-end.js');
 const tools = require('./sidebar/tools.js');
+const leetocde = require('./sidebar/leetcode.js');
 
 const nav = require('./nav/index.js');
 
@@ -15,7 +16,8 @@ module.exports = {
     sidebar:{
       ...frontEnd,
       ...computerFoundation,
-      ...tools
+      ...tools,
+      ...leetocde
     },
   },
 
