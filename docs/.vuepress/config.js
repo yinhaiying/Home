@@ -6,7 +6,7 @@ const leetocde = require('./sidebar/leetcode.js');
 const nav = require('./nav/index.js');
 
 module.exports = {
-  base:"/Home/",
+  base:'/Home/',
   title: '海鹰斯坦的个人主页',
   description: '111Just playing around',
   themeConfig: {
