@@ -16,4 +16,6 @@ p{
 <div class = "line"><a href = "/Home/front-end/ts/ts004">【004】类</a></div>
 <div class = "line"><a href = "/Home/front-end/ts/ts005">【005】泛型</a></div>
 <div class = "line"><a href = "/Home/front-end/ts/ts006">【006】枚举</a></div>
+<div class = "line"><a href = "/Home/front-end/ts/ts007">【007】类型推断</a></div>
+<div class = "line"><a href = "/Home/front-end/ts/ts008">【008】高级类型</a></div>
 
