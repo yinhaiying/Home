@@ -1,6 +1,12 @@
 module.exports = [
     { text: '主页', link: '/' },
-    { text: '前端',link: '/front-end/'},
+    {
+        text: '前端',
+        // link: '/front-end/',
+        items: [
+          { text: 'Typescript', link: '/typescript/' }
+        ]
+    },
     { text: '计算机基础', link: '/computer-foundation/' },
     { text: '项目', link: '/program/' },
     { text: '面试', link: '/interview/' },

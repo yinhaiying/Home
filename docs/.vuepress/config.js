@@ -1,6 +1,7 @@
 const computerFoundation = require('./sidebar/computer-foundation.js');
 const frontEnd = require('./sidebar/front-end.js');
 const tools = require('./sidebar/tools.js');
+const typescript = require('./sidebar/typescript.js');
 const leetocde = require('./sidebar/leetcode.js');
 
 const nav = require('./nav/index.js');
@@ -8,7 +9,7 @@ const nav = require('./nav/index.js');
 module.exports = {
   base:'/Home/',
   title: '海鹰斯坦的个人主页',
-  description: '111Just playing around',
+  description: '海鹰斯坦的个人主页',
   themeConfig: {
     logo: '/assets/logo.jpg',
     nav: nav,
@@ -17,7 +18,8 @@ module.exports = {
       ...frontEnd,
       ...computerFoundation,
       ...tools,
-      ...leetocde
+      ...leetocde,
+      ...typescript
     },
   },
 
