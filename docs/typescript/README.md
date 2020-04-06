@@ -18,4 +18,5 @@ p{
 <div class = "line"><a href = "/Home/typescript/ts006">【006】枚举</a></div>
 <div class = "line"><a href = "/Home/typescript/ts007">【007】类型推断</a></div>
 <div class = "line"><a href = "/Home/typescript/ts008">【008】高级类型</a></div>
+<div class = "line"><a href = "/Home/typescript/ts009">【009】装饰器</a></div>
 
