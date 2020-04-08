@@ -7,7 +7,14 @@ module.exports = [
           { text: 'Typescript', link: '/typescript/' }
         ]
     },
-    { text: '计算机基础', link: '/computer-foundation/' },
+    {
+      text: '计算机基础',
+      items: [
+        { text: '计算机网络', link: '/computer-net/' },
+        { text: '操作系统', link: '/operate-system/' },
+        { text: '数据结构和算法', link: '/data-structure/' },
+      ]
+    },
     { text: '项目', link: '/program/' },
     { text: '面试', link: '/interview/' },
     { text: 'Leetcode', link: '/leetcode/' },

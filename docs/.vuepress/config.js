@@ -3,7 +3,9 @@ const frontEnd = require('./sidebar/front-end.js');
 const tools = require('./sidebar/tools.js');
 const typescript = require('./sidebar/typescript.js');
 const leetocde = require('./sidebar/leetcode.js');
-
+const dataStructure = require('./sidebar/data-structure');
+const computerNet = require('./sidebar/computer-net');
+const operateSystem = require('./sidebar/operate-system');
 const nav = require('./nav/index.js');
 
 module.exports = {
@@ -19,7 +21,10 @@ module.exports = {
       ...computerFoundation,
       ...tools,
       ...leetocde,
-      ...typescript
+      ...typescript,
+      ...dataStructure,
+      ...computerNet,
+      ...operateSystem
     },
   },
 
