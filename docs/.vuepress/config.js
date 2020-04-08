@@ -6,6 +6,7 @@ const leetocde = require('./sidebar/leetcode.js');
 const dataStructure = require('./sidebar/data-structure');
 const computerNet = require('./sidebar/computer-net');
 const operateSystem = require('./sidebar/operate-system');
+const webpack = require('./sidebar/webpack');
 const nav = require('./nav/index.js');
 
 module.exports = {
@@ -24,7 +25,8 @@ module.exports = {
       ...typescript,
       ...dataStructure,
       ...computerNet,
-      ...operateSystem
+      ...operateSystem,
+      ...webpack
     },
   },
 
