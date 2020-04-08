@@ -7,6 +7,7 @@ const dataStructure = require('./sidebar/data-structure');
 const computerNet = require('./sidebar/computer-net');
 const operateSystem = require('./sidebar/operate-system');
 const webpack = require('./sidebar/webpack');
+const interview = require('./sidebar/interview');
 const nav = require('./nav/index.js');
 
 module.exports = {
@@ -26,7 +27,8 @@ module.exports = {
       ...dataStructure,
       ...computerNet,
       ...operateSystem,
-      ...webpack
+      ...webpack,
+      ...interview
     },
   },
 
