@@ -9,6 +9,7 @@ const operateSystem = require('./sidebar/operate-system');
 const webpack = require('./sidebar/webpack');
 const interview = require('./sidebar/interview');
 const program = require('./sidebar/program');
+const javascript = require('./sidebar/javascript');
 const nav = require('./nav/index.js');
 
 module.exports = {
@@ -32,7 +33,8 @@ module.exports = {
       ...operateSystem,
       ...webpack,
       ...interview,
-      ...program
+      ...program,
+      ...javascript
     },
   },
 

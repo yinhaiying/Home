@@ -4,6 +4,7 @@ module.exports = [
         text: '前端',
         // link: '/front-end/',
         items: [
+          { text: 'Javascript', link: '/javascript/javascript/js001' },
           { text: 'Typescript', link: '/typescript/' },
           { text: 'Webpack', link: '/webpack/' }
         ]
