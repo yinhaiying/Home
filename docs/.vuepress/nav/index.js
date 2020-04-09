@@ -16,7 +16,7 @@ module.exports = [
         { text: '数据结构和算法', link: '/data-structure/' },
       ]
     },
-    { text: '项目', link: '/program/' },
+    { text: '项目', link: '/program/vue/vue001' },
     { text: '面试', link: '/interview/' },
     { text: 'Leetcode', link: '/leetcode/' },
     { text: '常用网站', link: '/other-site/' },
