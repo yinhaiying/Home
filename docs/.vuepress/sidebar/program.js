@@ -6,7 +6,7 @@ module.exports = {
         "title": "Vue",
         "collabsable": false,
         "children": [
-          ["./vue/vue001","【001】从零开始搭建vue"],
+          ["./vue/vue001","【001】vue+svg渐变环形进度条组件"],
         ]
       },
     ]
