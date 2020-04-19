@@ -5,7 +5,9 @@ module.exports = {
         "title": "Javascript",
         "collabsable": false,
         "children": [
-          ["./javascript/js001","【001】javascript基础"],
+          ["./javascript/js001","【001】Vue Test Utils"],
+          ["./javascript/js002","【002】单元测试之断言——chai"],
+          ["./javascript/js003","【003】前端单元测试框架"],
         ]
       },
       {
