@@ -6,7 +6,8 @@ module.exports = [
         items: [
           { text: 'Javascript', link: '/javascript/javascript/js001' },
           { text: 'Typescript', link: '/typescript/' },
-          { text: 'Webpack', link: '/webpack/' }
+          { text: 'Webpack', link: '/webpack/' },
+          { text: 'Vue', link: '/vue/vue001' },
         ]
     },
     {

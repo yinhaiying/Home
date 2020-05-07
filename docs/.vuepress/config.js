@@ -10,6 +10,7 @@ const webpack = require('./sidebar/webpack');
 const interview = require('./sidebar/interview');
 const program = require('./sidebar/program');
 const javascript = require('./sidebar/javascript');
+const vue = require('./sidebar/vue');
 const nav = require('./nav/index.js');
 
 module.exports = {
@@ -21,7 +22,7 @@ module.exports = {
     logo: '/assets/logo.jpg',
     repo: 'https://github.com/yinhaiying/Home',
     nav: nav,
-    sidebarDepth: 2,
+    // sidebarDepth: 2,
     sidebar:{
       ...frontEnd,
       ...computerFoundation,
@@ -34,7 +35,8 @@ module.exports = {
       ...webpack,
       ...interview,
       ...program,
-      ...javascript
+      ...javascript,
+      ...vue
     },
   },
 
