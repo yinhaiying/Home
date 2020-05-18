@@ -10,6 +10,7 @@ const webpack = require('./sidebar/webpack');
 const interview = require('./sidebar/interview');
 const program = require('./sidebar/program');
 const javascript = require('./sidebar/javascript');
+const node = require('./sidebar/node');
 const vue = require('./sidebar/vue');
 const nav = require('./nav/index.js');
 
@@ -36,7 +37,8 @@ module.exports = {
       ...interview,
       ...program,
       ...javascript,
-      ...vue
+      ...vue,
+      ...node
     },
   },
 

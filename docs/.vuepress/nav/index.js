@@ -8,6 +8,7 @@ module.exports = [
           { text: 'Typescript', link: '/typescript/' },
           { text: 'Webpack', link: '/webpack/' },
           { text: 'Vue', link: '/vue/vue001' },
+          { text: 'Node', link: '/node/node001' },
         ]
     },
     {
