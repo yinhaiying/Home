@@ -10,6 +10,8 @@ const webpack = require('./sidebar/webpack');
 const interview = require('./sidebar/interview');
 const program = require('./sidebar/program');
 const javascript = require('./sidebar/javascript');
+const php = require('./sidebar/php');
+const mysql = require('./sidebar/mysql');
 const node = require('./sidebar/node');
 const vue = require('./sidebar/vue');
 const nav = require('./nav/index.js');
@@ -38,7 +40,9 @@ module.exports = {
       ...program,
       ...javascript,
       ...vue,
-      ...node
+      ...node,
+      ...php,
+      ...mysql
     },
   },
 

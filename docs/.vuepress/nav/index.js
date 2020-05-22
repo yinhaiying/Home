@@ -12,6 +12,14 @@ module.exports = [
         ]
     },
     {
+        text: '后端',
+        // link: '/front-end/',
+        items: [
+          { text: 'PHP', link: '/php/php001' },
+          { text: 'MySQL', link: '/mysql/mysql001' },
+        ]
+    },
+    {
       text: '计算机基础',
       items: [
         { text: '计算机网络', link: '/computer-net/' },
