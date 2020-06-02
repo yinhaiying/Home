@@ -6,7 +6,15 @@ module.exports = {
         "title": "Vue",
         "collabsable": false,
         "children": [
-          ["./vue/vue001","【001】vue+svg渐变环形进度条组件"],
+          ["./vue/vue001","【001】基于Vue实现组件库"],
+        ]
+      },
+      {
+        "name": "原生JS",
+        "title": "JS",
+        "collabsable": false,
+        "children": [
+          ["./js/js001","【001】基于原生JS实现工具库"],
         ]
       },
     ]

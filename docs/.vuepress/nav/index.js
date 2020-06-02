@@ -4,11 +4,12 @@ module.exports = [
         text: '前端',
         // link: '/front-end/',
         items: [
-          { text: 'Javascript', link: '/javascript/javascript/js001' },
+          { text: 'Javascript', link: '/javascript/js/js001' },
           { text: 'Typescript', link: '/typescript/' },
           { text: 'Webpack', link: '/webpack/' },
           { text: 'Vue', link: '/vue/vue001' },
           { text: 'Node', link: '/node/node001' },
+          { text: '设计模式', link: '/design-pattern/dm001' },
         ]
     },
     {
@@ -27,7 +28,7 @@ module.exports = [
         { text: '数据结构和算法', link: '/data-structure/' },
       ]
     },
-    { text: '项目', link: '/program/vue/vue001' },
+    { text: '项目', link: '/program/' },
     { text: '面试', link: '/interview/' },
     { text: 'Leetcode', link: '/leetcode/' },
     { text: '常用网站', link: '/other-site/' },
