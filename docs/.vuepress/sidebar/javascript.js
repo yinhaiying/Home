@@ -18,6 +18,14 @@ module.exports = {
           ["./test/test003","【003】前端单元测试框架"],
         ]
       },
+      {
+        "name": "构建工具",
+        "title": "构建工具",
+        "collabsable": false,
+        "children": [
+          ["./webpack/webpack001","【001】从零开始搭建webpack"],
+        ]
+      },
     ]
 }
 
