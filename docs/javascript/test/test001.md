@@ -1,7 +1,5 @@
 ### Vue Test Utils
 
-
-
 #### Wrapper
 Vue Test Utils 是一个基于包裹器的 API。
 
