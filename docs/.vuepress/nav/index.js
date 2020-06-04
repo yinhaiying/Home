@@ -7,6 +7,7 @@ module.exports = [
           { text: 'Javascript', link: '/javascript/js/js001' },
           { text: 'Typescript', link: '/typescript/' },
           { text: 'Vue', link: '/vue/vue001' },
+          { text: 'React', link: '/react/react001' },
           { text: 'Node', link: '/node/node001' },
           { text: '设计模式', link: '/design-pattern/dm001' },
         ]

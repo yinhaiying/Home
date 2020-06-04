@@ -14,6 +14,7 @@ const php = require('./sidebar/php');
 const mysql = require('./sidebar/mysql');
 const node = require('./sidebar/node');
 const vue = require('./sidebar/vue');
+const react = require('./sidebar/react');
 const nav = require('./nav/index.js');
 
 module.exports = {
@@ -40,6 +41,7 @@ module.exports = {
       ...javascript,
       ...designPattern,
       ...vue,
+      ...react,
       ...node,
       ...php,
       ...mysql
