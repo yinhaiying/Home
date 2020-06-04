@@ -6,6 +6,9 @@ module.exports = {
         "collabsable": false,
         "children": [
           ["./js/js001","【001】原生js实现滑块验证"],
+          ["./js/js002","【002】从输入URL到页面加载全过程"],
+          ["./js/js003","【003】Cookie和Session"],
+          ["./js/js004","【004】正向代理和反向代理"],
         ]
       },
       {
