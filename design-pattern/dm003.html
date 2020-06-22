@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>设计模式——建造者模式 | 海鹰斯坦的个人主页</title>
+    <meta name="description" content="海鹰斯坦的个人主页">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/Home/assets/css/0.styles.e94f337b.css" as="style"><link rel="preload" href="/Home/assets/js/app.4e9de29e.js" as="script"><link rel="preload" href="/Home/assets/js/2.852f0768.js" as="script"><link rel="preload" href="/Home/assets/js/17.1ef904c7.js" as="script"><link rel="prefetch" href="/Home/assets/js/10.8473db2b.js"><link rel="prefetch" href="/Home/assets/js/11.b4241947.js"><link rel="prefetch" href="/Home/assets/js/12.b09a44ea.js"><link rel="prefetch" href="/Home/assets/js/13.d63114f0.js"><link rel="prefetch" href="/Home/assets/js/14.0b8be25b.js"><link rel="prefetch" href="/Home/assets/js/15.bd62ea79.js"><link rel="prefetch" href="/Home/assets/js/16.cc1ee14d.js"><link rel="prefetch" href="/Home/assets/js/18.e0a82910.js"><link rel="prefetch" href="/Home/assets/js/19.38d174c3.js"><link rel="prefetch" href="/Home/assets/js/20.aa3ff896.js"><link rel="prefetch" href="/Home/assets/js/21.c79e05d9.js"><link rel="prefetch" href="/Home/assets/js/22.da13ae6a.js"><link rel="prefetch" href="/Home/assets/js/23.78c92169.js"><link rel="prefetch" href="/Home/assets/js/24.94b7a7ff.js"><link rel="prefetch" href="/Home/assets/js/25.5b167e5d.js"><link rel="prefetch" href="/Home/assets/js/26.d3807609.js"><link rel="prefetch" href="/Home/assets/js/27.50f8fd8e.js"><link rel="prefetch" href="/Home/assets/js/28.69c4d2e9.js"><link rel="prefetch" href="/Home/assets/js/29.24a2de88.js"><link rel="prefetch" href="/Home/assets/js/3.ab36bc1f.js"><link rel="prefetch" href="/Home/assets/js/30.2c780612.js"><link rel="prefetch" href="/Home/assets/js/31.a3bef37b.js"><link rel="prefetch" href="/Home/assets/js/32.c42a9904.js"><link rel="prefetch" href="/Home/assets/js/33.2fba6d41.js"><link rel="prefetch" href="/Home/assets/js/34.76e04935.js"><link rel="prefetch" href="/Home/assets/js/35.00510acc.js"><link rel="prefetch" href="/Home/assets/js/36.62b6e63f.js"><link rel="prefetch" href="/Home/assets/js/37.42dd3af6.js"><link rel="prefetch" href="/Home/assets/js/38.ce73a544.js"><link rel="prefetch" href="/Home/assets/js/39.f02bc307.js"><link rel="prefetch" href="/Home/assets/js/4.3e212fe4.js"><link rel="prefetch" href="/Home/assets/js/40.5e347b91.js"><link rel="prefetch" href="/Home/assets/js/41.c4785cba.js"><link rel="prefetch" href="/Home/assets/js/42.7b055896.js"><link rel="prefetch" href="/Home/assets/js/43.38197c33.js"><link rel="prefetch" href="/Home/assets/js/44.bad3d004.js"><link rel="prefetch" href="/Home/assets/js/45.e1f5c336.js"><link rel="prefetch" href="/Home/assets/js/46.e4dd4809.js"><link rel="prefetch" href="/Home/assets/js/47.44cdcf1f.js"><link rel="prefetch" href="/Home/assets/js/48.6b0bcf94.js"><link rel="prefetch" href="/Home/assets/js/49.f84d8c11.js"><link rel="prefetch" href="/Home/assets/js/5.c75cc4d2.js"><link rel="prefetch" href="/Home/assets/js/50.62bd8e57.js"><link rel="prefetch" href="/Home/assets/js/51.b9cec1fc.js"><link rel="prefetch" href="/Home/assets/js/52.fc7f7a1a.js"><link rel="prefetch" href="/Home/assets/js/53.b13a962e.js"><link rel="prefetch" href="/Home/assets/js/54.ec6286b0.js"><link rel="prefetch" href="/Home/assets/js/55.7996b340.js"><link rel="prefetch" href="/Home/assets/js/56.97d6f2d9.js"><link rel="prefetch" href="/Home/assets/js/57.0df64cb1.js"><link rel="prefetch" href="/Home/assets/js/58.c30a5bea.js"><link rel="prefetch" href="/Home/assets/js/59.7c9a8b47.js"><link rel="prefetch" href="/Home/assets/js/6.b1439560.js"><link rel="prefetch" href="/Home/assets/js/60.fc89a25b.js"><link rel="prefetch" href="/Home/assets/js/61.3c3dc19e.js"><link rel="prefetch" href="/Home/assets/js/62.2970193a.js"><link rel="prefetch" href="/Home/assets/js/63.95bb274b.js"><link rel="prefetch" href="/Home/assets/js/64.f0d5cf0c.js"><link rel="prefetch" href="/Home/assets/js/65.d6318947.js"><link rel="prefetch" href="/Home/assets/js/66.8eff8ba2.js"><link rel="prefetch" href="/Home/assets/js/67.cfc67837.js"><link rel="prefetch" href="/Home/assets/js/68.2fa4de54.js"><link rel="prefetch" href="/Home/assets/js/69.f6ca426c.js"><link rel="prefetch" href="/Home/assets/js/7.f227c584.js"><link rel="prefetch" href="/Home/assets/js/70.6d1e6835.js"><link rel="prefetch" href="/Home/assets/js/8.f8a0efca.js"><link rel="prefetch" href="/Home/assets/js/9.2c44c2a4.js">
+    <link rel="stylesheet" href="/Home/assets/css/0.styles.e94f337b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Home/" class="home-link router-link-active"><img src="/Home/assets/logo.jpg" alt="海鹰斯坦的个人主页" class="logo"> <span class="site-name can-hide">海鹰斯坦的个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>设计模式</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Home/design-pattern/dm001.html" class="sidebar-link">【001】设计模式——单例模式</a></li><li><a href="/Home/design-pattern/dm002.html" class="sidebar-link">【002】设计模式——工厂模式</a></li><li><a href="/Home/design-pattern/dm003.html" class="active sidebar-link">【003】设计模式——建造者模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Home/design-pattern/dm004.html" class="sidebar-link">【004】设计模式——原型模式</a></li><li><a href="/Home/design-pattern/dm005.html" class="sidebar-link">【005】设计模式——外观设计模式</a></li><li><a href="/Home/design-pattern/dm006.html" class="sidebar-link">【006】设计模式——适配器设计模式</a></li><li><a href="/Home/design-pattern/dm007.html" class="sidebar-link">【007】设计模式——代理模式</a></li><li><a href="/Home/design-pattern/dm008.html" class="sidebar-link">【008】设计模式——装饰者模式</a></li><li><a href="/Home/design-pattern/dm009.html" class="sidebar-link">【009】设计模式——桥接模式</a></li><li><a href="/Home/design-pattern/dm010.html" class="sidebar-link">【010】设计模式——组合模式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="设计模式-建造者模式"><a href="#设计模式-建造者模式" class="header-anchor">#</a> 设计模式——建造者模式</h3> <p>提到建造者，我们可能第一印象就是城市中建高楼大厦，建房子一般设计到业主，项目负责人，建筑队工人。业主告诉项目负责人，需要建造什么样的房子，项目负责人告诉工人应该怎么修建，不同工人完成不同工作。大家各司其职，最终得到一个建成的房子。虽然在建房子过程中，各个部分都需要打交道，但是更多的还是各司其职，每个人完成每个人的工作。<strong>其实就是把一个复杂的建房子工程，拆分成了若干部分由不同人来完成。</strong>
+在编程中也是如此，如果我们需要创建一个复杂的对象，可以把这个对象进行构建，使得不同部分，完成不同功能。</p> <h4 id="建造者模式定义："><a href="#建造者模式定义：" class="header-anchor">#</a> 建造者模式定义：</h4> <p>将一个复杂的对象分解成多个简单的对象来进行构建，将复杂的构建层与表示层分离，使得相同的构建过程可以创建不同的表示的模式便是建造者模式。看定义通常是无法直接理解这种设计模式的，还是直接看代码：
+假设我们需要创建一辆车，车的组件包括车名，车牌号，车的价钱，车的引擎等。我们先看不使用建造者模式应该如何创建：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>number <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>engine <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token comment">//设置名字</span>
+  <span class="token function">setName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'宝马'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token comment">//设置车牌号</span>
+  <span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>number <span class="token operator">=</span> <span class="token string">'888888'</span>
+  <span class="token punctuation">}</span>
+<span class="token comment">//设置价钱</span>
+  <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token string">'100万'</span>
+  <span class="token punctuation">}</span>
+<span class="token comment">//设置引擎</span>
+  <span class="token function">setEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>engine <span class="token operator">=</span> <span class="token string">'最好的引擎'</span>
+  <span class="token punctuation">}</span>
+<span class="token comment">//车的创建</span>
+  <span class="token function">getCar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//创建一个车：</span>
+<span class="token keyword">let</span> car <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+car<span class="token punctuation">.</span><span class="token function">getCar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>car<span class="token punctuation">)</span>
+</code></pre></div><p>从上面的代码中，我们可以看到创建一辆车需要的元素包括：<code>name</code>,<code>number</code>,<code>price</code>,<code>engine</code>。每一种元素又需要<code>setxx</code>来单独实现，最终车的创建还需要通过<code>getCar</code>来完成。也就是说在创建车的过程中需要的元素较多，创建过程相互影响，相互耦合。这只是简单的4个元素，而且耦合性也不是太高，但是假设元素他特别多，代码的耦合性也特别多，如果出现添加新的要素，那么实现起来要修改的代码就太多了。<strong>因此，我们需要对代码进行解耦，这就是建造者模式。</strong>
+上面我们提到了建造一个房子，需要业主，项目负责人，建筑工人。其实建造者模式也包括这三个类:产品类(客户提出产品需要)，指挥者类，建造者类。
+建造者模式的使用流程如下：</p> <ol><li>客户提出产品需求：比如上面产品就是一辆小汽车，产品要素包括name,number,price,engine</li> <li>指挥者根据产品需求，安排建造者完成需求的各个部分</li> <li>建造者完成相应的部分</li></ol> <p><strong>使用建造者模式修改上面的代码如下：</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//产品类：产品要素</span>
+<span class="token keyword">class</span> <span class="token class-name">Car</span><span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>number <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>engine <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//建造者类：各种工人完成相应的部分</span>
+<span class="token keyword">class</span> <span class="token class-name">CarBuilder</span><span class="token punctuation">{</span>
+  <span class="token function">setName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'宝马'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>number <span class="token operator">=</span> <span class="token string">'888888'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token parameter">price</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token string">'100万'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">setEngine</span><span class="token punctuation">(</span><span class="token parameter">engine</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>engine <span class="token operator">=</span> <span class="token string">'最好的引擎'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">getCar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> car <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    car<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+    car<span class="token punctuation">.</span>number <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>number<span class="token punctuation">;</span>
+    car<span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>price<span class="token punctuation">;</span>
+    car<span class="token punctuation">.</span>engine <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>engine<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> car<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//指挥官类：指挥工人完成各部分工作</span>
+<span class="token keyword">class</span> <span class="token class-name">Director</span><span class="token punctuation">{</span>
+  <span class="token function">action</span><span class="token punctuation">(</span><span class="token parameter">builder</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    builder<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    builder<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    builder<span class="token punctuation">.</span><span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    builder<span class="token punctuation">.</span><span class="token function">setEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//使用方法：</span>
+
+<span class="token keyword">let</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CarBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> director <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Director</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+director<span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> car <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">getCar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>car<span class="token punctuation">)</span>
+</code></pre></div><p>从上面的代码中，我们可以看出，定义了产品类，主要负责定义产品的需求；建造者类，主要负责完成需求的各个部分；指挥者类，主要负责指挥工人完成各部分工作。实际上就是把一辆车的复杂的创建过程抽离成三个简单的类来完成，大家各司其职，减少了代码的耦合。当以后需要添加新的需求时，只需要在各个部分单独定义即可，比如现在造汽车还需要安装玻璃，那么只需要在每个类里面定义玻璃相关的要素，建造者，指挥者即可。而不需要考虑代码的各部分耦合。<strong>这就是建造者模式。</strong></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Home/design-pattern/dm002.html" class="prev">
+        【002】设计模式——工厂模式
+      </a></span> <span class="next"><a href="/Home/design-pattern/dm004.html">
+        【004】设计模式——原型模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Home/assets/js/app.4e9de29e.js" defer></script><script src="/Home/assets/js/2.852f0768.js" defer></script><script src="/Home/assets/js/17.1ef904c7.js" defer></script>
+  </body>
+</html>

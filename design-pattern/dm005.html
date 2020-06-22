@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>设计模式——外观设计模式 | 海鹰斯坦的个人主页</title>
+    <meta name="description" content="海鹰斯坦的个人主页">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/Home/assets/css/0.styles.e94f337b.css" as="style"><link rel="preload" href="/Home/assets/js/app.4e9de29e.js" as="script"><link rel="preload" href="/Home/assets/js/2.852f0768.js" as="script"><link rel="preload" href="/Home/assets/js/19.38d174c3.js" as="script"><link rel="prefetch" href="/Home/assets/js/10.8473db2b.js"><link rel="prefetch" href="/Home/assets/js/11.b4241947.js"><link rel="prefetch" href="/Home/assets/js/12.b09a44ea.js"><link rel="prefetch" href="/Home/assets/js/13.d63114f0.js"><link rel="prefetch" href="/Home/assets/js/14.0b8be25b.js"><link rel="prefetch" href="/Home/assets/js/15.bd62ea79.js"><link rel="prefetch" href="/Home/assets/js/16.cc1ee14d.js"><link rel="prefetch" href="/Home/assets/js/17.1ef904c7.js"><link rel="prefetch" href="/Home/assets/js/18.e0a82910.js"><link rel="prefetch" href="/Home/assets/js/20.aa3ff896.js"><link rel="prefetch" href="/Home/assets/js/21.c79e05d9.js"><link rel="prefetch" href="/Home/assets/js/22.da13ae6a.js"><link rel="prefetch" href="/Home/assets/js/23.78c92169.js"><link rel="prefetch" href="/Home/assets/js/24.94b7a7ff.js"><link rel="prefetch" href="/Home/assets/js/25.5b167e5d.js"><link rel="prefetch" href="/Home/assets/js/26.d3807609.js"><link rel="prefetch" href="/Home/assets/js/27.50f8fd8e.js"><link rel="prefetch" href="/Home/assets/js/28.69c4d2e9.js"><link rel="prefetch" href="/Home/assets/js/29.24a2de88.js"><link rel="prefetch" href="/Home/assets/js/3.ab36bc1f.js"><link rel="prefetch" href="/Home/assets/js/30.2c780612.js"><link rel="prefetch" href="/Home/assets/js/31.a3bef37b.js"><link rel="prefetch" href="/Home/assets/js/32.c42a9904.js"><link rel="prefetch" href="/Home/assets/js/33.2fba6d41.js"><link rel="prefetch" href="/Home/assets/js/34.76e04935.js"><link rel="prefetch" href="/Home/assets/js/35.00510acc.js"><link rel="prefetch" href="/Home/assets/js/36.62b6e63f.js"><link rel="prefetch" href="/Home/assets/js/37.42dd3af6.js"><link rel="prefetch" href="/Home/assets/js/38.ce73a544.js"><link rel="prefetch" href="/Home/assets/js/39.f02bc307.js"><link rel="prefetch" href="/Home/assets/js/4.3e212fe4.js"><link rel="prefetch" href="/Home/assets/js/40.5e347b91.js"><link rel="prefetch" href="/Home/assets/js/41.c4785cba.js"><link rel="prefetch" href="/Home/assets/js/42.7b055896.js"><link rel="prefetch" href="/Home/assets/js/43.38197c33.js"><link rel="prefetch" href="/Home/assets/js/44.bad3d004.js"><link rel="prefetch" href="/Home/assets/js/45.e1f5c336.js"><link rel="prefetch" href="/Home/assets/js/46.e4dd4809.js"><link rel="prefetch" href="/Home/assets/js/47.44cdcf1f.js"><link rel="prefetch" href="/Home/assets/js/48.6b0bcf94.js"><link rel="prefetch" href="/Home/assets/js/49.f84d8c11.js"><link rel="prefetch" href="/Home/assets/js/5.c75cc4d2.js"><link rel="prefetch" href="/Home/assets/js/50.62bd8e57.js"><link rel="prefetch" href="/Home/assets/js/51.b9cec1fc.js"><link rel="prefetch" href="/Home/assets/js/52.fc7f7a1a.js"><link rel="prefetch" href="/Home/assets/js/53.b13a962e.js"><link rel="prefetch" href="/Home/assets/js/54.ec6286b0.js"><link rel="prefetch" href="/Home/assets/js/55.7996b340.js"><link rel="prefetch" href="/Home/assets/js/56.97d6f2d9.js"><link rel="prefetch" href="/Home/assets/js/57.0df64cb1.js"><link rel="prefetch" href="/Home/assets/js/58.c30a5bea.js"><link rel="prefetch" href="/Home/assets/js/59.7c9a8b47.js"><link rel="prefetch" href="/Home/assets/js/6.b1439560.js"><link rel="prefetch" href="/Home/assets/js/60.fc89a25b.js"><link rel="prefetch" href="/Home/assets/js/61.3c3dc19e.js"><link rel="prefetch" href="/Home/assets/js/62.2970193a.js"><link rel="prefetch" href="/Home/assets/js/63.95bb274b.js"><link rel="prefetch" href="/Home/assets/js/64.f0d5cf0c.js"><link rel="prefetch" href="/Home/assets/js/65.d6318947.js"><link rel="prefetch" href="/Home/assets/js/66.8eff8ba2.js"><link rel="prefetch" href="/Home/assets/js/67.cfc67837.js"><link rel="prefetch" href="/Home/assets/js/68.2fa4de54.js"><link rel="prefetch" href="/Home/assets/js/69.f6ca426c.js"><link rel="prefetch" href="/Home/assets/js/7.f227c584.js"><link rel="prefetch" href="/Home/assets/js/70.6d1e6835.js"><link rel="prefetch" href="/Home/assets/js/8.f8a0efca.js"><link rel="prefetch" href="/Home/assets/js/9.2c44c2a4.js">
+    <link rel="stylesheet" href="/Home/assets/css/0.styles.e94f337b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Home/" class="home-link router-link-active"><img src="/Home/assets/logo.jpg" alt="海鹰斯坦的个人主页" class="logo"> <span class="site-name can-hide">海鹰斯坦的个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>设计模式</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Home/design-pattern/dm001.html" class="sidebar-link">【001】设计模式——单例模式</a></li><li><a href="/Home/design-pattern/dm002.html" class="sidebar-link">【002】设计模式——工厂模式</a></li><li><a href="/Home/design-pattern/dm003.html" class="sidebar-link">【003】设计模式——建造者模式</a></li><li><a href="/Home/design-pattern/dm004.html" class="sidebar-link">【004】设计模式——原型模式</a></li><li><a href="/Home/design-pattern/dm005.html" class="active sidebar-link">【005】设计模式——外观设计模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Home/design-pattern/dm006.html" class="sidebar-link">【006】设计模式——适配器设计模式</a></li><li><a href="/Home/design-pattern/dm007.html" class="sidebar-link">【007】设计模式——代理模式</a></li><li><a href="/Home/design-pattern/dm008.html" class="sidebar-link">【008】设计模式——装饰者模式</a></li><li><a href="/Home/design-pattern/dm009.html" class="sidebar-link">【009】设计模式——桥接模式</a></li><li><a href="/Home/design-pattern/dm010.html" class="sidebar-link">【010】设计模式——组合模式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="设计模式-外观设计模式"><a href="#设计模式-外观设计模式" class="header-anchor">#</a> 设计模式——外观设计模式</h3> <blockquote><p>上面的创建型设计模式，专注于创建对象。而结构性设计模式则专注于结构设计，通俗点来说就是对象与对象之间的结构设计，也就是如何将类或者对象进行更好的组织，以方便使用。</p></blockquote> <h4 id="外观设计模式定义："><a href="#外观设计模式定义：" class="header-anchor">#</a> 外观设计模式定义：</h4> <p>为一组复杂的子接口提供一个更高级的统一接口，以便更方便的去实现子接口的功能。看定义总是感觉很复杂，我们根据一些场景来具体分析：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token constant">HTML</span>代码
+ <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;btn1&quot;</span><span class="token operator">&gt;</span>按钮<span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;btn2&quot;</span><span class="token operator">&gt;</span>按钮<span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+js代码
+    <span class="token keyword">let</span> oBtn1<span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> oBtn2<span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">//按钮1</span>
+    <span class="token keyword">function</span> <span class="token function">btn1Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这里是按钮1的内容'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//DOM事件的兼容性处理</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> document<span class="token punctuation">.</span>addEventListener <span class="token punctuation">)</span><span class="token punctuation">{</span>
+      oBtn1<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span> <span class="token punctuation">,</span> btn1Fn<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      oBtn1<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">&quot;onclick&quot;</span> <span class="token punctuation">,</span> btn1Fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+      oBtn1<span class="token punctuation">.</span>onclick <span class="token operator">=</span> btn1Fn<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">//按钮2</span>
+    <span class="token keyword">function</span> <span class="token function">btn2Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这里是按钮2的内容'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//DOM事件的兼容性处理</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> document<span class="token punctuation">.</span>addEventListener <span class="token punctuation">)</span><span class="token punctuation">{</span>
+      oBtn1<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span> <span class="token punctuation">,</span> btn2Fn<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      oBtn1<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">&quot;onclick&quot;</span> <span class="token punctuation">,</span> btn2Fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+      oBtn1<span class="token punctuation">.</span>onclick <span class="token operator">=</span> btn2Fn<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+</code></pre></div><p>上面代码中由两个按钮，每个按钮有对应的点击事件。但是我们知道如果直接使用<code>onclickDOM0</code>级点击事件，那么就可能出现后续的事件覆盖前面的。因此建议使用DOM2级点击事件，但是<code>addEventListener</code>存在兼容性问题，在<code>IE</code>中存在不兼容。因此我们需要对每次事件做兼容性处理。从上面的代码中，我们可以看出，我们对按钮1和按钮2都做了兼容性处理。事实上，这些兼容性处理都是相同的，如果每一次都去写复杂的重复的兼容性代码，是没有意义的。因此，我们通常会将兼容性处理封装起来，作为一个统一的接口，在需要的时候，直接调用这个接口，而不是再去重复写这个复杂的兼容代码，<strong>这种将复杂的代码封装起来，其实就是外观设计模式.</strong> 我们看使用外观设计模式实现的代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> oBtn1<span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> oBtn2<span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'btn2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//按钮1</span>
+<span class="token keyword">function</span> <span class="token function">btn1Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这里是按钮1的内容'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//按钮2</span>
+<span class="token keyword">function</span> <span class="token function">btn2Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'这里是按钮2的内容'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">bindEvent</span><span class="token punctuation">(</span><span class="token parameter">element<span class="token punctuation">,</span>type<span class="token punctuation">,</span>fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    element<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span>fn<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    element<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">'on'</span><span class="token operator">+</span>type<span class="token punctuation">,</span>fn<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    element<span class="token punctuation">[</span><span class="token string">&quot;on&quot;</span><span class="token operator">+</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> fn<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">bindEvent</span><span class="token punctuation">(</span>oBtn1<span class="token punctuation">,</span><span class="token string">'click'</span><span class="token punctuation">,</span>btn1Fn<span class="token punctuation">)</span>
+<span class="token function">bindEvent</span><span class="token punctuation">(</span>oBtn2<span class="token punctuation">,</span><span class="token string">'click'</span><span class="token punctuation">,</span>btn2Fn<span class="token punctuation">)</span>
+
+</code></pre></div><p>从上面的代码中，我们可以看到使用了<code>bindEvent</code>来封装兼容性处理，然后<code>oBtn1</code>和<code>oBtn2</code>触发点击事件都是直接调用这个封装函数。其实这就是外观模式的一次典型应用。所有的API的兼容性封装其实都是外观模式的应用。外观模式其实就是把一些复杂的操作隐藏起来，然后我们从更高级别直接调用。我们再看我们在开发中经常使用到的一个例子：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span>  person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">init</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//  这里是初始化代码</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">getAge</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//  这里是获取元素的方法</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">getName</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//  这里是获取样式的代码</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">getJob</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//这里是获取个人工作的代码</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> person<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>上面的代码是一个对象<code>person</code>,里面封装了与个人信息相关的<code>age</code>,<code>name</code>,<code>job</code>等方法，然后在需要获取这些信息时，我们使用<code>person.xx</code>来调用。其实这就是外观模式的另外一种应用。在开发中，我们经常会使用命名空间，将一些相关的信息都封装到这个对象中，这种将各类操作饥饿和在一起，对外提供统一的接口就是外观模式的典型应用。</p> <h4 id="外观设计模式总结："><a href="#外观设计模式总结：" class="header-anchor">#</a> 外观设计模式总结：</h4> <p>外观设计模式时结构性设计模式，我们之前说过结构型设计模式是用于组织代码结构的。<strong>而外观设计模式就是把所有的子类饥饿和在一起，对外提供统一的接口这样的一种组织形式。</strong> 典型的使用就是各种兼容性API的封装和命名空间的使用。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Home/design-pattern/dm004.html" class="prev">
+        【004】设计模式——原型模式
+      </a></span> <span class="next"><a href="/Home/design-pattern/dm006.html">
+        【006】设计模式——适配器设计模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Home/assets/js/app.4e9de29e.js" defer></script><script src="/Home/assets/js/2.852f0768.js" defer></script><script src="/Home/assets/js/19.38d174c3.js" defer></script>
+  </body>
+</html>

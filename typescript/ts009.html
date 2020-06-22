@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>装饰器 | 海鹰斯坦的个人主页</title>
+    <meta name="description" content="海鹰斯坦的个人主页">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/Home/assets/css/0.styles.e94f337b.css" as="style"><link rel="preload" href="/Home/assets/js/app.4e9de29e.js" as="script"><link rel="preload" href="/Home/assets/js/2.852f0768.js" as="script"><link rel="preload" href="/Home/assets/js/64.f0d5cf0c.js" as="script"><link rel="prefetch" href="/Home/assets/js/10.8473db2b.js"><link rel="prefetch" href="/Home/assets/js/11.b4241947.js"><link rel="prefetch" href="/Home/assets/js/12.b09a44ea.js"><link rel="prefetch" href="/Home/assets/js/13.d63114f0.js"><link rel="prefetch" href="/Home/assets/js/14.0b8be25b.js"><link rel="prefetch" href="/Home/assets/js/15.bd62ea79.js"><link rel="prefetch" href="/Home/assets/js/16.cc1ee14d.js"><link rel="prefetch" href="/Home/assets/js/17.1ef904c7.js"><link rel="prefetch" href="/Home/assets/js/18.e0a82910.js"><link rel="prefetch" href="/Home/assets/js/19.38d174c3.js"><link rel="prefetch" href="/Home/assets/js/20.aa3ff896.js"><link rel="prefetch" href="/Home/assets/js/21.c79e05d9.js"><link rel="prefetch" href="/Home/assets/js/22.da13ae6a.js"><link rel="prefetch" href="/Home/assets/js/23.78c92169.js"><link rel="prefetch" href="/Home/assets/js/24.94b7a7ff.js"><link rel="prefetch" href="/Home/assets/js/25.5b167e5d.js"><link rel="prefetch" href="/Home/assets/js/26.d3807609.js"><link rel="prefetch" href="/Home/assets/js/27.50f8fd8e.js"><link rel="prefetch" href="/Home/assets/js/28.69c4d2e9.js"><link rel="prefetch" href="/Home/assets/js/29.24a2de88.js"><link rel="prefetch" href="/Home/assets/js/3.ab36bc1f.js"><link rel="prefetch" href="/Home/assets/js/30.2c780612.js"><link rel="prefetch" href="/Home/assets/js/31.a3bef37b.js"><link rel="prefetch" href="/Home/assets/js/32.c42a9904.js"><link rel="prefetch" href="/Home/assets/js/33.2fba6d41.js"><link rel="prefetch" href="/Home/assets/js/34.76e04935.js"><link rel="prefetch" href="/Home/assets/js/35.00510acc.js"><link rel="prefetch" href="/Home/assets/js/36.62b6e63f.js"><link rel="prefetch" href="/Home/assets/js/37.42dd3af6.js"><link rel="prefetch" href="/Home/assets/js/38.ce73a544.js"><link rel="prefetch" href="/Home/assets/js/39.f02bc307.js"><link rel="prefetch" href="/Home/assets/js/4.3e212fe4.js"><link rel="prefetch" href="/Home/assets/js/40.5e347b91.js"><link rel="prefetch" href="/Home/assets/js/41.c4785cba.js"><link rel="prefetch" href="/Home/assets/js/42.7b055896.js"><link rel="prefetch" href="/Home/assets/js/43.38197c33.js"><link rel="prefetch" href="/Home/assets/js/44.bad3d004.js"><link rel="prefetch" href="/Home/assets/js/45.e1f5c336.js"><link rel="prefetch" href="/Home/assets/js/46.e4dd4809.js"><link rel="prefetch" href="/Home/assets/js/47.44cdcf1f.js"><link rel="prefetch" href="/Home/assets/js/48.6b0bcf94.js"><link rel="prefetch" href="/Home/assets/js/49.f84d8c11.js"><link rel="prefetch" href="/Home/assets/js/5.c75cc4d2.js"><link rel="prefetch" href="/Home/assets/js/50.62bd8e57.js"><link rel="prefetch" href="/Home/assets/js/51.b9cec1fc.js"><link rel="prefetch" href="/Home/assets/js/52.fc7f7a1a.js"><link rel="prefetch" href="/Home/assets/js/53.b13a962e.js"><link rel="prefetch" href="/Home/assets/js/54.ec6286b0.js"><link rel="prefetch" href="/Home/assets/js/55.7996b340.js"><link rel="prefetch" href="/Home/assets/js/56.97d6f2d9.js"><link rel="prefetch" href="/Home/assets/js/57.0df64cb1.js"><link rel="prefetch" href="/Home/assets/js/58.c30a5bea.js"><link rel="prefetch" href="/Home/assets/js/59.7c9a8b47.js"><link rel="prefetch" href="/Home/assets/js/6.b1439560.js"><link rel="prefetch" href="/Home/assets/js/60.fc89a25b.js"><link rel="prefetch" href="/Home/assets/js/61.3c3dc19e.js"><link rel="prefetch" href="/Home/assets/js/62.2970193a.js"><link rel="prefetch" href="/Home/assets/js/63.95bb274b.js"><link rel="prefetch" href="/Home/assets/js/65.d6318947.js"><link rel="prefetch" href="/Home/assets/js/66.8eff8ba2.js"><link rel="prefetch" href="/Home/assets/js/67.cfc67837.js"><link rel="prefetch" href="/Home/assets/js/68.2fa4de54.js"><link rel="prefetch" href="/Home/assets/js/69.f6ca426c.js"><link rel="prefetch" href="/Home/assets/js/7.f227c584.js"><link rel="prefetch" href="/Home/assets/js/70.6d1e6835.js"><link rel="prefetch" href="/Home/assets/js/8.f8a0efca.js"><link rel="prefetch" href="/Home/assets/js/9.2c44c2a4.js">
+    <link rel="stylesheet" href="/Home/assets/css/0.styles.e94f337b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Home/" class="home-link router-link-active"><img src="/Home/assets/logo.jpg" alt="海鹰斯坦的个人主页" class="logo"> <span class="site-name can-hide">海鹰斯坦的个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link router-link-active">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link router-link-active">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Typescript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Home/typescript/" class="sidebar-link">目录</a></li><li><a href="/Home/typescript/ts001.html" class="sidebar-link">【001】数据类型</a></li><li><a href="/Home/typescript/ts002.html" class="sidebar-link">【002】函数</a></li><li><a href="/Home/typescript/ts003.html" class="sidebar-link">【003】接口</a></li><li><a href="/Home/typescript/ts004.html" class="sidebar-link">【004】类</a></li><li><a href="/Home/typescript/ts005.html" class="sidebar-link">【005】泛型</a></li><li><a href="/Home/typescript/ts006.html" class="sidebar-link">【006】枚举</a></li><li><a href="/Home/typescript/ts007.html" class="sidebar-link">【007】类型推论</a></li><li><a href="/Home/typescript/ts008.html" class="sidebar-link">【008】高级类型</a></li><li><a href="/Home/typescript/ts009.html" class="active sidebar-link">【009】装饰器</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Home/typescript/ts010.html" class="sidebar-link">【010】tsconfig配置文件</a></li><li><a href="/Home/typescript/ts011.html" class="sidebar-link">【011】发布一个ts编写的npm包</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="装饰器"><a href="#装饰器" class="header-anchor">#</a> 装饰器</h3> <p>装饰器是一项实验性特性,若要启用实验性的装饰器特性，你必须在命令行或<code>tsconfig.json</code>里启用<code>experimentalDecorators</code>编译器选项。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+    <span class="token string">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;experimentalDecorators&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="装饰器定义"><a href="#装饰器定义" class="header-anchor">#</a> 装饰器定义</h4> <p>装饰器是一种<strong>特殊类型的函数</strong>，可以用来修饰类，属性和方法。可以在不修改类，属性和方法的前提下扩展类，属性和方法的功能。<br>
+装饰器使用<code>@expression</code>这种形式，<code>expression</code>求值后必须为一个函数，它会在运行时被调用，被装饰的声明信息做为参数传入。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 定义一个装饰器</span>
+<span class="token keyword">function</span> <span class="token function">persons</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'target'</span><span class="token punctuation">,</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 在类的上面使用装饰器</span>
+@persons
+<span class="token keyword">class</span> <span class="token class-name">PersonClass</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>在上面的代码中,<code>person</code>函数作为一个装饰器，如果我们想要使用装饰器，只需要在对应的类上面，使用<code>@person</code>注意，这里来的<code>person</code>必须是一个函数。</p> <h4 id="装饰器的功能-扩展类的功能"><a href="#装饰器的功能-扩展类的功能" class="header-anchor">#</a> 装饰器的功能——扩展类的功能</h4> <p>我们使用装饰器的最大的特点就是为了拓展类的功能，装饰器中的参数<code>target</code>就是要装饰的类<code>PersonClass(){}</code>，接下来我们尝试给类拓展功能。示例：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 定义一个装饰器</span>
+<span class="token keyword">function</span> <span class="token function">persons</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// 给装饰器修饰的类拓展方法</span>
+  target<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;装饰器&quot;</span><span class="token punctuation">;</span>
+  target<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">showName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+@persons
+<span class="token keyword">class</span> <span class="token class-name">PersonClass</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PersonClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 装饰器</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span><span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//装饰器</span>
+</code></pre></div><p>在上面的代码中，我们给装饰器修饰的类拓展了一个属性<code>name</code>和方法<code>showName</code>。实例化以后我们发现可以正常地调用这些属性和方法。这就相当于拓展了类的功能。</p> <h4 id="装饰器运行时机"><a href="#装饰器运行时机" class="header-anchor">#</a> 装饰器运行时机</h4> <p>装饰器对类的行为的改变，是代码编译时发生的（不是TypeScript编译，而是js在执行机中编译阶段），而不是在运行时。这意味着，装饰器能在编译阶段运行代码。也就是说，装饰器本质就是编译时执行的函数。</p> <h4 id="装饰器的分类"><a href="#装饰器的分类" class="header-anchor">#</a> 装饰器的分类</h4> <p>刚刚在上面中，我们使用的装饰器都是简单的装饰器，但是事实上如果我们需要拓展类的功能，通常需要传入一些参数，这时候就需要有参装饰器了。在<code>typecript</code>中通过装饰器工厂来实现装饰器参数的传递。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+@<span class="token function">func</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">PersonClass</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>从上面的代码中，我们给装饰器传递了参数<code>@func('hello')</code>。<code>func</code>是一个工厂函数，它可以接收参数，同时返回一个函数。返回的函数作为装饰器。</p> <h4 id="属性装饰器"><a href="#属性装饰器" class="header-anchor">#</a> 属性装饰器</h4> <p>属性装饰器声明在一个属性声明之前（紧靠着属性声明）。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">prop</span><span class="token punctuation">(</span><span class="token parameter">value<span class="token operator">:</span>string<span class="token operator">|</span>number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>target<span class="token operator">:</span>any<span class="token punctuation">,</span>attr<span class="token operator">:</span>any<span class="token punctuation">)</span><span class="token operator">:</span><span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    target<span class="token punctuation">[</span>attr<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Index</span><span class="token punctuation">{</span>
+  @<span class="token function">prop</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span>
+  <span class="token keyword">static</span> sex<span class="token operator">:</span>string<span class="token punctuation">;</span>
+  @<span class="token function">prop</span><span class="token punctuation">(</span><span class="token number">27</span><span class="token punctuation">)</span>
+  <span class="token keyword">public</span> age<span class="token operator">:</span>number<span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Index<span class="token punctuation">.</span>sex<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// hello</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 27</span>
+</code></pre></div><ol><li>如果是属性装饰器，那么声明在属性声明之前。</li> <li>属性装饰器有两个参数,<code>target</code>和<code>attr</code>。如果修饰的是静态属性，那么<code>target</code>是类，如果修饰的是实例属性，那么<code>target</code>是实例成员。<code>attr</code>是对应的属性。</li></ol> <h4 id="方法装饰器"><a href="#方法装饰器" class="header-anchor">#</a> 方法装饰器</h4> <p>属性装饰器声明在一个方法声明之前（紧靠着方法声明）。方法装饰器接收三个参数。</p> <ol><li>对于静态方法来说是类的构造函数，对于实例方法是类的原型对象。</li> <li>方法名称</li> <li>方法的属性描述符<code>{writable: true, enumerable: true, configurable: true, value: ƒ}</code></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token parameter">target<span class="token operator">:</span>any<span class="token punctuation">,</span> methodName<span class="token operator">:</span>string<span class="token punctuation">,</span> desc<span class="token operator">:</span>any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>methodName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 修改原来的方法</span>
+    desc<span class="token punctuation">.</span><span class="token function-variable function">value</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+      <span class="token keyword">const</span> str <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> str<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Http</span><span class="token punctuation">{</span>
+  @<span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">get</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h4> <p><strong>装饰器的特点</strong></p> <ol><li><strong>本质是一个函数</strong></li> <li><strong>装饰器的功能就是用于拓展类的功能，比如给类的成员，方法等拓展功能</strong></li> <li><strong>在编译时执行，而不是类实例话或者调用时执行</strong></li> <li><strong>装饰器的使用，关键是看需要几个参数，然后根据需要修饰的对象来实现功能即可</strong></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Home/typescript/ts008.html" class="prev">
+        【008】高级类型
+      </a></span> <span class="next"><a href="/Home/typescript/ts010.html">
+        【010】tsconfig配置文件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Home/assets/js/app.4e9de29e.js" defer></script><script src="/Home/assets/js/2.852f0768.js" defer></script><script src="/Home/assets/js/64.f0d5cf0c.js" defer></script>
+  </body>
+</html>

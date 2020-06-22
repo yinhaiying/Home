@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>设计模式——代理模式 | 海鹰斯坦的个人主页</title>
+    <meta name="description" content="海鹰斯坦的个人主页">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/Home/assets/css/0.styles.e94f337b.css" as="style"><link rel="preload" href="/Home/assets/js/app.4e9de29e.js" as="script"><link rel="preload" href="/Home/assets/js/2.852f0768.js" as="script"><link rel="preload" href="/Home/assets/js/21.c79e05d9.js" as="script"><link rel="prefetch" href="/Home/assets/js/10.8473db2b.js"><link rel="prefetch" href="/Home/assets/js/11.b4241947.js"><link rel="prefetch" href="/Home/assets/js/12.b09a44ea.js"><link rel="prefetch" href="/Home/assets/js/13.d63114f0.js"><link rel="prefetch" href="/Home/assets/js/14.0b8be25b.js"><link rel="prefetch" href="/Home/assets/js/15.bd62ea79.js"><link rel="prefetch" href="/Home/assets/js/16.cc1ee14d.js"><link rel="prefetch" href="/Home/assets/js/17.1ef904c7.js"><link rel="prefetch" href="/Home/assets/js/18.e0a82910.js"><link rel="prefetch" href="/Home/assets/js/19.38d174c3.js"><link rel="prefetch" href="/Home/assets/js/20.aa3ff896.js"><link rel="prefetch" href="/Home/assets/js/22.da13ae6a.js"><link rel="prefetch" href="/Home/assets/js/23.78c92169.js"><link rel="prefetch" href="/Home/assets/js/24.94b7a7ff.js"><link rel="prefetch" href="/Home/assets/js/25.5b167e5d.js"><link rel="prefetch" href="/Home/assets/js/26.d3807609.js"><link rel="prefetch" href="/Home/assets/js/27.50f8fd8e.js"><link rel="prefetch" href="/Home/assets/js/28.69c4d2e9.js"><link rel="prefetch" href="/Home/assets/js/29.24a2de88.js"><link rel="prefetch" href="/Home/assets/js/3.ab36bc1f.js"><link rel="prefetch" href="/Home/assets/js/30.2c780612.js"><link rel="prefetch" href="/Home/assets/js/31.a3bef37b.js"><link rel="prefetch" href="/Home/assets/js/32.c42a9904.js"><link rel="prefetch" href="/Home/assets/js/33.2fba6d41.js"><link rel="prefetch" href="/Home/assets/js/34.76e04935.js"><link rel="prefetch" href="/Home/assets/js/35.00510acc.js"><link rel="prefetch" href="/Home/assets/js/36.62b6e63f.js"><link rel="prefetch" href="/Home/assets/js/37.42dd3af6.js"><link rel="prefetch" href="/Home/assets/js/38.ce73a544.js"><link rel="prefetch" href="/Home/assets/js/39.f02bc307.js"><link rel="prefetch" href="/Home/assets/js/4.3e212fe4.js"><link rel="prefetch" href="/Home/assets/js/40.5e347b91.js"><link rel="prefetch" href="/Home/assets/js/41.c4785cba.js"><link rel="prefetch" href="/Home/assets/js/42.7b055896.js"><link rel="prefetch" href="/Home/assets/js/43.38197c33.js"><link rel="prefetch" href="/Home/assets/js/44.bad3d004.js"><link rel="prefetch" href="/Home/assets/js/45.e1f5c336.js"><link rel="prefetch" href="/Home/assets/js/46.e4dd4809.js"><link rel="prefetch" href="/Home/assets/js/47.44cdcf1f.js"><link rel="prefetch" href="/Home/assets/js/48.6b0bcf94.js"><link rel="prefetch" href="/Home/assets/js/49.f84d8c11.js"><link rel="prefetch" href="/Home/assets/js/5.c75cc4d2.js"><link rel="prefetch" href="/Home/assets/js/50.62bd8e57.js"><link rel="prefetch" href="/Home/assets/js/51.b9cec1fc.js"><link rel="prefetch" href="/Home/assets/js/52.fc7f7a1a.js"><link rel="prefetch" href="/Home/assets/js/53.b13a962e.js"><link rel="prefetch" href="/Home/assets/js/54.ec6286b0.js"><link rel="prefetch" href="/Home/assets/js/55.7996b340.js"><link rel="prefetch" href="/Home/assets/js/56.97d6f2d9.js"><link rel="prefetch" href="/Home/assets/js/57.0df64cb1.js"><link rel="prefetch" href="/Home/assets/js/58.c30a5bea.js"><link rel="prefetch" href="/Home/assets/js/59.7c9a8b47.js"><link rel="prefetch" href="/Home/assets/js/6.b1439560.js"><link rel="prefetch" href="/Home/assets/js/60.fc89a25b.js"><link rel="prefetch" href="/Home/assets/js/61.3c3dc19e.js"><link rel="prefetch" href="/Home/assets/js/62.2970193a.js"><link rel="prefetch" href="/Home/assets/js/63.95bb274b.js"><link rel="prefetch" href="/Home/assets/js/64.f0d5cf0c.js"><link rel="prefetch" href="/Home/assets/js/65.d6318947.js"><link rel="prefetch" href="/Home/assets/js/66.8eff8ba2.js"><link rel="prefetch" href="/Home/assets/js/67.cfc67837.js"><link rel="prefetch" href="/Home/assets/js/68.2fa4de54.js"><link rel="prefetch" href="/Home/assets/js/69.f6ca426c.js"><link rel="prefetch" href="/Home/assets/js/7.f227c584.js"><link rel="prefetch" href="/Home/assets/js/70.6d1e6835.js"><link rel="prefetch" href="/Home/assets/js/8.f8a0efca.js"><link rel="prefetch" href="/Home/assets/js/9.2c44c2a4.js">
+    <link rel="stylesheet" href="/Home/assets/css/0.styles.e94f337b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Home/" class="home-link router-link-active"><img src="/Home/assets/logo.jpg" alt="海鹰斯坦的个人主页" class="logo"> <span class="site-name can-hide">海鹰斯坦的个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>设计模式</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Home/design-pattern/dm001.html" class="sidebar-link">【001】设计模式——单例模式</a></li><li><a href="/Home/design-pattern/dm002.html" class="sidebar-link">【002】设计模式——工厂模式</a></li><li><a href="/Home/design-pattern/dm003.html" class="sidebar-link">【003】设计模式——建造者模式</a></li><li><a href="/Home/design-pattern/dm004.html" class="sidebar-link">【004】设计模式——原型模式</a></li><li><a href="/Home/design-pattern/dm005.html" class="sidebar-link">【005】设计模式——外观设计模式</a></li><li><a href="/Home/design-pattern/dm006.html" class="sidebar-link">【006】设计模式——适配器设计模式</a></li><li><a href="/Home/design-pattern/dm007.html" class="active sidebar-link">【007】设计模式——代理模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Home/design-pattern/dm008.html" class="sidebar-link">【008】设计模式——装饰者模式</a></li><li><a href="/Home/design-pattern/dm009.html" class="sidebar-link">【009】设计模式——桥接模式</a></li><li><a href="/Home/design-pattern/dm010.html" class="sidebar-link">【010】设计模式——组合模式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="设计模式-代理模式"><a href="#设计模式-代理模式" class="header-anchor">#</a> 设计模式——代理模式</h3> <blockquote><p>提到代理，我们可能想到的是代理人。在生活中代理人最多的可能就是明星了，每个明星都有自己的代理人，我们找明星合作通常都是先接触代理人，然后才接触明星。也就是说这个代理人是在我们和明星之间进行了一次拦截，筛选出符合见明星的人。其实代理模式在开发中也是这样，只不过这里代理的是对象，而不是明星，通过为对象提供一个代理，用来控制对这个对象的访问。</p></blockquote> <h4 id="代理模式定义："><a href="#代理模式定义：" class="header-anchor">#</a> 代理模式定义：</h4> <p>为对象提供一个代理，用来控制对这个对象的访问。</p> <p>下面以具体代码举例：比如公司的个人信息的访问：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id <span class="token operator">=</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+  name <span class="token operator">=</span> <span class="token string">'刘亦菲'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span><span class="token number">30</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+</code></pre></div><p>上面定义了一个包含个人信息的对象person，如果没有进行代理，那么可以直接通过person.xx进行访问。但是，事实上我们不希望个人信息被查看，只有本人能够进行查看和修改。<strong>那么这时候我们可以对对象的访问添加代理。</strong> 具体代码如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> info <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    id<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span><span class="token string">'刘亦菲'</span><span class="token punctuation">,</span>
+    age<span class="token operator">:</span><span class="token number">24</span><span class="token punctuation">,</span>
+    job<span class="token operator">:</span><span class="token string">'teacher'</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>id<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//代理对象</span>
+    <span class="token keyword">let</span> handle <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">get</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>key</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>key <span class="token operator">===</span> <span class="token string">'age'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">if</span><span class="token punctuation">(</span>id <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span>key<span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'您没有权限查看该信息'</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">set</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>key<span class="token punctuation">,</span>value</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>id <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span>key<span class="token punctuation">,</span>value<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+          <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'您没有权限修改个人信息'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>person<span class="token punctuation">,</span>handle<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> star <span class="token operator">=</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">{</span>id<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>star<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+star<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>star<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+
+</code></pre></div><p>通过使用<code>new Proxy(target,handle)</code>来进行代理。其中<code>target</code>为被代理对象，<code>handle</code>为代理对象或者说拦截对象。在<code>handle</code>中我们通过定义<code>get</code>和<code>set</code>函数来进行拦截，只有<code>id</code>为<code>1</code>的人才能查看自己的个人信息。<strong>这就是代理模式。</strong></p> <h4 id="代理模式的应用场景："><a href="#代理模式的应用场景：" class="header-anchor">#</a> 代理模式的应用场景：</h4> <p>上面的例子只是简单的代理对象的访问，其实代理更多的时候是用于控制开销很大的对象的访问。比如，一个创建实例开销很大的访问，它会把创建实例放到方法被调用的时候(也就是真正需要被用到的时候)，因为如果整个程序运行期间都没有用到这个对象，那么就不需要创建它，这样可以大大节省资源。比如图片的延迟加载，我们并不需要一开始就加载所有的图片，而是使用一张loading图片来代替它们，只有在真正需要展示这张图片的时候，再替代掉src即可。</p> <h4 id="代理模式的总结："><a href="#代理模式的总结：" class="header-anchor">#</a> 代理模式的总结：</h4> <p>归功接底代理模式就是控制对对象的访问，无论是拦截访问，还是延迟访问都是对对象访问的控制罢了。如果你要访问一个对象，但是你不想马上访问，或者不想直接访问那么这都是代理模式。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Home/design-pattern/dm006.html" class="prev">
+        【006】设计模式——适配器设计模式
+      </a></span> <span class="next"><a href="/Home/design-pattern/dm008.html">
+        【008】设计模式——装饰者模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Home/assets/js/app.4e9de29e.js" defer></script><script src="/Home/assets/js/2.852f0768.js" defer></script><script src="/Home/assets/js/21.c79e05d9.js" defer></script>
+  </body>
+</html>

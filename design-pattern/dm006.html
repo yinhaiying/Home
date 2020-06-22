@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>设计模式——适配器模式 | 海鹰斯坦的个人主页</title>
+    <meta name="description" content="海鹰斯坦的个人主页">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/Home/assets/css/0.styles.e94f337b.css" as="style"><link rel="preload" href="/Home/assets/js/app.4e9de29e.js" as="script"><link rel="preload" href="/Home/assets/js/2.852f0768.js" as="script"><link rel="preload" href="/Home/assets/js/20.aa3ff896.js" as="script"><link rel="prefetch" href="/Home/assets/js/10.8473db2b.js"><link rel="prefetch" href="/Home/assets/js/11.b4241947.js"><link rel="prefetch" href="/Home/assets/js/12.b09a44ea.js"><link rel="prefetch" href="/Home/assets/js/13.d63114f0.js"><link rel="prefetch" href="/Home/assets/js/14.0b8be25b.js"><link rel="prefetch" href="/Home/assets/js/15.bd62ea79.js"><link rel="prefetch" href="/Home/assets/js/16.cc1ee14d.js"><link rel="prefetch" href="/Home/assets/js/17.1ef904c7.js"><link rel="prefetch" href="/Home/assets/js/18.e0a82910.js"><link rel="prefetch" href="/Home/assets/js/19.38d174c3.js"><link rel="prefetch" href="/Home/assets/js/21.c79e05d9.js"><link rel="prefetch" href="/Home/assets/js/22.da13ae6a.js"><link rel="prefetch" href="/Home/assets/js/23.78c92169.js"><link rel="prefetch" href="/Home/assets/js/24.94b7a7ff.js"><link rel="prefetch" href="/Home/assets/js/25.5b167e5d.js"><link rel="prefetch" href="/Home/assets/js/26.d3807609.js"><link rel="prefetch" href="/Home/assets/js/27.50f8fd8e.js"><link rel="prefetch" href="/Home/assets/js/28.69c4d2e9.js"><link rel="prefetch" href="/Home/assets/js/29.24a2de88.js"><link rel="prefetch" href="/Home/assets/js/3.ab36bc1f.js"><link rel="prefetch" href="/Home/assets/js/30.2c780612.js"><link rel="prefetch" href="/Home/assets/js/31.a3bef37b.js"><link rel="prefetch" href="/Home/assets/js/32.c42a9904.js"><link rel="prefetch" href="/Home/assets/js/33.2fba6d41.js"><link rel="prefetch" href="/Home/assets/js/34.76e04935.js"><link rel="prefetch" href="/Home/assets/js/35.00510acc.js"><link rel="prefetch" href="/Home/assets/js/36.62b6e63f.js"><link rel="prefetch" href="/Home/assets/js/37.42dd3af6.js"><link rel="prefetch" href="/Home/assets/js/38.ce73a544.js"><link rel="prefetch" href="/Home/assets/js/39.f02bc307.js"><link rel="prefetch" href="/Home/assets/js/4.3e212fe4.js"><link rel="prefetch" href="/Home/assets/js/40.5e347b91.js"><link rel="prefetch" href="/Home/assets/js/41.c4785cba.js"><link rel="prefetch" href="/Home/assets/js/42.7b055896.js"><link rel="prefetch" href="/Home/assets/js/43.38197c33.js"><link rel="prefetch" href="/Home/assets/js/44.bad3d004.js"><link rel="prefetch" href="/Home/assets/js/45.e1f5c336.js"><link rel="prefetch" href="/Home/assets/js/46.e4dd4809.js"><link rel="prefetch" href="/Home/assets/js/47.44cdcf1f.js"><link rel="prefetch" href="/Home/assets/js/48.6b0bcf94.js"><link rel="prefetch" href="/Home/assets/js/49.f84d8c11.js"><link rel="prefetch" href="/Home/assets/js/5.c75cc4d2.js"><link rel="prefetch" href="/Home/assets/js/50.62bd8e57.js"><link rel="prefetch" href="/Home/assets/js/51.b9cec1fc.js"><link rel="prefetch" href="/Home/assets/js/52.fc7f7a1a.js"><link rel="prefetch" href="/Home/assets/js/53.b13a962e.js"><link rel="prefetch" href="/Home/assets/js/54.ec6286b0.js"><link rel="prefetch" href="/Home/assets/js/55.7996b340.js"><link rel="prefetch" href="/Home/assets/js/56.97d6f2d9.js"><link rel="prefetch" href="/Home/assets/js/57.0df64cb1.js"><link rel="prefetch" href="/Home/assets/js/58.c30a5bea.js"><link rel="prefetch" href="/Home/assets/js/59.7c9a8b47.js"><link rel="prefetch" href="/Home/assets/js/6.b1439560.js"><link rel="prefetch" href="/Home/assets/js/60.fc89a25b.js"><link rel="prefetch" href="/Home/assets/js/61.3c3dc19e.js"><link rel="prefetch" href="/Home/assets/js/62.2970193a.js"><link rel="prefetch" href="/Home/assets/js/63.95bb274b.js"><link rel="prefetch" href="/Home/assets/js/64.f0d5cf0c.js"><link rel="prefetch" href="/Home/assets/js/65.d6318947.js"><link rel="prefetch" href="/Home/assets/js/66.8eff8ba2.js"><link rel="prefetch" href="/Home/assets/js/67.cfc67837.js"><link rel="prefetch" href="/Home/assets/js/68.2fa4de54.js"><link rel="prefetch" href="/Home/assets/js/69.f6ca426c.js"><link rel="prefetch" href="/Home/assets/js/7.f227c584.js"><link rel="prefetch" href="/Home/assets/js/70.6d1e6835.js"><link rel="prefetch" href="/Home/assets/js/8.f8a0efca.js"><link rel="prefetch" href="/Home/assets/js/9.2c44c2a4.js">
+    <link rel="stylesheet" href="/Home/assets/css/0.styles.e94f337b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Home/" class="home-link router-link-active"><img src="/Home/assets/logo.jpg" alt="海鹰斯坦的个人主页" class="logo"> <span class="site-name can-hide">海鹰斯坦的个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>设计模式</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Home/design-pattern/dm001.html" class="sidebar-link">【001】设计模式——单例模式</a></li><li><a href="/Home/design-pattern/dm002.html" class="sidebar-link">【002】设计模式——工厂模式</a></li><li><a href="/Home/design-pattern/dm003.html" class="sidebar-link">【003】设计模式——建造者模式</a></li><li><a href="/Home/design-pattern/dm004.html" class="sidebar-link">【004】设计模式——原型模式</a></li><li><a href="/Home/design-pattern/dm005.html" class="sidebar-link">【005】设计模式——外观设计模式</a></li><li><a href="/Home/design-pattern/dm006.html" class="active sidebar-link">【006】设计模式——适配器设计模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Home/design-pattern/dm007.html" class="sidebar-link">【007】设计模式——代理模式</a></li><li><a href="/Home/design-pattern/dm008.html" class="sidebar-link">【008】设计模式——装饰者模式</a></li><li><a href="/Home/design-pattern/dm009.html" class="sidebar-link">【009】设计模式——桥接模式</a></li><li><a href="/Home/design-pattern/dm010.html" class="sidebar-link">【010】设计模式——组合模式</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="设计模式-适配器模式"><a href="#设计模式-适配器模式" class="header-anchor">#</a> 设计模式——适配器模式</h3> <blockquote><p>提到适配器，我们想到的可能是电源适配器。一些电子产品的插座是三孔的，但是如果没有三孔插座，那么我们就需要使用转换器，使用两孔插座通过转换器来给三孔电子产品充电，这个转换器就是适配器。在生活中，我们经常会碰到这种由于接口不同需要通过转换来实现的情况，在实际的代码开发中，我们经常也会遇到接口不同，需要进行转换的过程。这个转换的过程就是适配。<strong>这种设计模式就是适配器设计模式。</strong></p></blockquote> <h4 id="适配器模式定义："><a href="#适配器模式定义：" class="header-anchor">#</a> 适配器模式定义：</h4> <p>将一个类的接口转换成另外一个接口，以满足用户需求，解决接口不一样而产生的问题。看具体的代码:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//假设result为请求后台得到的数据，数组形式</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'henry'</span><span class="token punctuation">,</span><span class="token number">24</span><span class="token punctuation">,</span><span class="token string">'teacher'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'名字是'</span><span class="token operator">+</span>result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'年龄是'</span><span class="token operator">+</span>result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'职业是'</span><span class="token operator">+</span>result<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面的代码中，定义了一个用于获取个人信息的函数，个人信息的获取为通过后台接口返回到<code>result</code>中。现在返回的数据为数组形式。我们后面所有的操作都是按照数组来进行的，比如获取姓名<code>result[0]</code>。获取年龄为<code>result[1]</code>。但是，假如后端接口发生变化了，不再返回数组形式了(这在实际的开发中可能非常常见)。而实返回一个对象了。那么我们后面所有的使用数组的操作就都是错误的了，这样的话所有涉及到数据的都需要进行修改，如果后续代码非常多，那么修改起来就非常麻烦了。这时候，我们可能考虑变通一下，将返回的对象，转换成我们需要的数组即可。代码如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//假设result2为请求后台得到的数据,对象形式</span>
+
+  <span class="token keyword">var</span> result2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span><span class="token string">'henry'</span><span class="token punctuation">,</span>
+    age<span class="token operator">:</span><span class="token number">24</span><span class="token punctuation">,</span>
+    job<span class="token operator">:</span><span class="token string">'teacher'</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//将对象转化成数组</span>
+  <span class="token keyword">function</span> <span class="token function">objToArray</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span>  <span class="token function">objToArray</span><span class="token punctuation">(</span>result2<span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'名字是'</span><span class="token operator">+</span>result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'年龄是'</span><span class="token operator">+</span>result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'职业是'</span><span class="token operator">+</span>result<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面的代码中，<code>result2</code>为后台请求的接口，数据类型是对象。但是我们之前都是按照数组处理的，因此我们需要将对象转换成数组，函数<code>objToArray</code>就是用来转换的函数。这样的话，我们就不需要去修改后面的代码，这个转换的过程就是适配过程。<code>objToArray</code>就是适配函数。这就是适配器设计模式。</p> <h4 id="适配器设计模式总结："><a href="#适配器设计模式总结：" class="header-anchor">#</a> 适配器设计模式总结：</h4> <p>适配器设计模式其实就是把一些不适合我们当前使用的接口，通过适配以后，转换成能够被我们使用的接口。最常见的就是接口的转换</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Home/design-pattern/dm005.html" class="prev">
+        【005】设计模式——外观设计模式
+      </a></span> <span class="next"><a href="/Home/design-pattern/dm007.html">
+        【007】设计模式——代理模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Home/assets/js/app.4e9de29e.js" defer></script><script src="/Home/assets/js/2.852f0768.js" defer></script><script src="/Home/assets/js/20.aa3ff896.js" defer></script>
+  </body>
+</html>

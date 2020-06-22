@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue Test Utils | 海鹰斯坦的个人主页</title>
+    <meta name="description" content="海鹰斯坦的个人主页">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/Home/assets/css/0.styles.e94f337b.css" as="style"><link rel="preload" href="/Home/assets/js/app.4e9de29e.js" as="script"><link rel="preload" href="/Home/assets/js/2.852f0768.js" as="script"><link rel="preload" href="/Home/assets/js/31.a3bef37b.js" as="script"><link rel="prefetch" href="/Home/assets/js/10.8473db2b.js"><link rel="prefetch" href="/Home/assets/js/11.b4241947.js"><link rel="prefetch" href="/Home/assets/js/12.b09a44ea.js"><link rel="prefetch" href="/Home/assets/js/13.d63114f0.js"><link rel="prefetch" href="/Home/assets/js/14.0b8be25b.js"><link rel="prefetch" href="/Home/assets/js/15.bd62ea79.js"><link rel="prefetch" href="/Home/assets/js/16.cc1ee14d.js"><link rel="prefetch" href="/Home/assets/js/17.1ef904c7.js"><link rel="prefetch" href="/Home/assets/js/18.e0a82910.js"><link rel="prefetch" href="/Home/assets/js/19.38d174c3.js"><link rel="prefetch" href="/Home/assets/js/20.aa3ff896.js"><link rel="prefetch" href="/Home/assets/js/21.c79e05d9.js"><link rel="prefetch" href="/Home/assets/js/22.da13ae6a.js"><link rel="prefetch" href="/Home/assets/js/23.78c92169.js"><link rel="prefetch" href="/Home/assets/js/24.94b7a7ff.js"><link rel="prefetch" href="/Home/assets/js/25.5b167e5d.js"><link rel="prefetch" href="/Home/assets/js/26.d3807609.js"><link rel="prefetch" href="/Home/assets/js/27.50f8fd8e.js"><link rel="prefetch" href="/Home/assets/js/28.69c4d2e9.js"><link rel="prefetch" href="/Home/assets/js/29.24a2de88.js"><link rel="prefetch" href="/Home/assets/js/3.ab36bc1f.js"><link rel="prefetch" href="/Home/assets/js/30.2c780612.js"><link rel="prefetch" href="/Home/assets/js/32.c42a9904.js"><link rel="prefetch" href="/Home/assets/js/33.2fba6d41.js"><link rel="prefetch" href="/Home/assets/js/34.76e04935.js"><link rel="prefetch" href="/Home/assets/js/35.00510acc.js"><link rel="prefetch" href="/Home/assets/js/36.62b6e63f.js"><link rel="prefetch" href="/Home/assets/js/37.42dd3af6.js"><link rel="prefetch" href="/Home/assets/js/38.ce73a544.js"><link rel="prefetch" href="/Home/assets/js/39.f02bc307.js"><link rel="prefetch" href="/Home/assets/js/4.3e212fe4.js"><link rel="prefetch" href="/Home/assets/js/40.5e347b91.js"><link rel="prefetch" href="/Home/assets/js/41.c4785cba.js"><link rel="prefetch" href="/Home/assets/js/42.7b055896.js"><link rel="prefetch" href="/Home/assets/js/43.38197c33.js"><link rel="prefetch" href="/Home/assets/js/44.bad3d004.js"><link rel="prefetch" href="/Home/assets/js/45.e1f5c336.js"><link rel="prefetch" href="/Home/assets/js/46.e4dd4809.js"><link rel="prefetch" href="/Home/assets/js/47.44cdcf1f.js"><link rel="prefetch" href="/Home/assets/js/48.6b0bcf94.js"><link rel="prefetch" href="/Home/assets/js/49.f84d8c11.js"><link rel="prefetch" href="/Home/assets/js/5.c75cc4d2.js"><link rel="prefetch" href="/Home/assets/js/50.62bd8e57.js"><link rel="prefetch" href="/Home/assets/js/51.b9cec1fc.js"><link rel="prefetch" href="/Home/assets/js/52.fc7f7a1a.js"><link rel="prefetch" href="/Home/assets/js/53.b13a962e.js"><link rel="prefetch" href="/Home/assets/js/54.ec6286b0.js"><link rel="prefetch" href="/Home/assets/js/55.7996b340.js"><link rel="prefetch" href="/Home/assets/js/56.97d6f2d9.js"><link rel="prefetch" href="/Home/assets/js/57.0df64cb1.js"><link rel="prefetch" href="/Home/assets/js/58.c30a5bea.js"><link rel="prefetch" href="/Home/assets/js/59.7c9a8b47.js"><link rel="prefetch" href="/Home/assets/js/6.b1439560.js"><link rel="prefetch" href="/Home/assets/js/60.fc89a25b.js"><link rel="prefetch" href="/Home/assets/js/61.3c3dc19e.js"><link rel="prefetch" href="/Home/assets/js/62.2970193a.js"><link rel="prefetch" href="/Home/assets/js/63.95bb274b.js"><link rel="prefetch" href="/Home/assets/js/64.f0d5cf0c.js"><link rel="prefetch" href="/Home/assets/js/65.d6318947.js"><link rel="prefetch" href="/Home/assets/js/66.8eff8ba2.js"><link rel="prefetch" href="/Home/assets/js/67.cfc67837.js"><link rel="prefetch" href="/Home/assets/js/68.2fa4de54.js"><link rel="prefetch" href="/Home/assets/js/69.f6ca426c.js"><link rel="prefetch" href="/Home/assets/js/7.f227c584.js"><link rel="prefetch" href="/Home/assets/js/70.6d1e6835.js"><link rel="prefetch" href="/Home/assets/js/8.f8a0efca.js"><link rel="prefetch" href="/Home/assets/js/9.2c44c2a4.js">
+    <link rel="stylesheet" href="/Home/assets/css/0.styles.e94f337b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Home/" class="home-link router-link-active"><img src="/Home/assets/logo.jpg" alt="海鹰斯坦的个人主页" class="logo"> <span class="site-name can-hide">海鹰斯坦的个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>原生JS基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>单元测试</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Home/javascript/test/test001.html" class="active sidebar-link">【001】Vue Test Utils</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Home/javascript/test/test002.html" class="sidebar-link">【002】单元测试之断言——chai</a></li><li><a href="/Home/javascript/test/test003.html" class="sidebar-link">【003】前端单元测试框架</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>构建工具</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="vue-test-utils"><a href="#vue-test-utils" class="header-anchor">#</a> Vue Test Utils</h3> <h4 id="wrapper"><a href="#wrapper" class="header-anchor">#</a> Wrapper</h4> <p>Vue Test Utils 是一个基于包裹器的 API。</p> <p>一个 Wrapper 是一个包括了一个挂载组件或 vnode，以及测试该组件或 vnode 的方法
+通过mount、shallow等方法进行挂载返回一个包裹器对象，包裹器会暴露很多封装、遍历和查询其内部的Vue组件实例的便捷的方法。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 通过mount挂载返回包含所有子组件的包裹器</span>
+<span class="token keyword">const</span> wrapper <span class="token operator">=</span>  <span class="token function">mount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+  propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'primary'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 使用shallowMount进行挂载不返回包含子组件的包裹器</span>
+<span class="token keyword">const</span> wrapper <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+  propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'primary'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="wrapper具有的属性"><a href="#wrapper具有的属性" class="header-anchor">#</a> Wrapper具有的属性</h4> <p><strong>vm</strong>：这是该组件的实例。你可以通过 wrapper.vm 访问一个实例所有的方法和属性。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> vm <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+  propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'primary'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span>vm<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>$el<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 获取这个实例的节点结构</span>
+</code></pre></div><p><strong>element</strong>：包裹器的根 DOM 节点，他的值与vm.$el相同。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> element <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+  propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'primary'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span>element<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 获取这个实例的节点结构</span>
+</code></pre></div><p><strong>options</strong>:options.attachedToDocument,如果组件在渲染之后被添加到了文档上则为真。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> options <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+    propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">'primary'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span>options<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Object{attachedToDocument: false}</span>
+</code></pre></div><h4 id="wrapper具有的方法"><a href="#wrapper具有的方法" class="header-anchor">#</a> Wrapper具有的方法</h4> <p><strong>attributes</strong>:返回 Wrapper DOM节点的特性对象。如果提供了 key，则返回这个 key 对应的值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> wrapper <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+    propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">'primary'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">attribute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Object{data-v-03ab08b4: '', class: 'y-button y-button-primary y-button-left'}</span>
+</code></pre></div><p><strong>classes</strong>：返回 class 名称的数组。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> wrapper <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+    propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">'primary'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">classes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// ['y-button', 'y-button-primary', 'y-button-left']</span>
+</code></pre></div><p><strong>contains</strong>：是否包含匹配的选择器或者组件</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Icon <span class="token keyword">from</span> '<span class="token punctuation">.</span><span class="token operator">/</span>icon<span class="token punctuation">.</span>vue<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">'button.y-button-primary'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 是否包含类名为y-button-primary的button组件</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>Icon<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 是否包含Icon组件</span>
+</code></pre></div><p>这里需要注意，我们这里引入的Icon与我们实际在Button组件中使用的Icon名字可能不一样。比如我们实际中使用的Icon名字是<code>y-icon</code>,如下所示：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">data-v-03ab08b4</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>y-button y-button-primary y-button-left<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>y-icon</span> <span class="token attr-name">data-v-03ab08b4</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>settings<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>y-icon</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>那么这时候我们需要使用替换功能,将y-icon替换为Icon，通过设置stubs值即可。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> wrapper <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+  propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'primary'</span><span class="token punctuation">,</span>
+    icon<span class="token operator">:</span><span class="token string">'settings'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  stubs<span class="token operator">:</span><span class="token punctuation">{</span>  <span class="token comment">//替换功能</span>
+    <span class="token string">'y-icon'</span><span class="token operator">:</span>Icon
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>html</strong>:返回DOM节点的HTML字符串。我们可以用来判断是否与我们写的结构相同。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token string">'&lt;button data-v-03ab08b4=&quot;&quot; class=&quot;y-button y-button-primary y-button-left&quot;&gt;&lt;svg data-v-03ab08b4=&quot;&quot; aria-hidden=&quot;true&quot; class=&quot;icon&quot;&gt;&lt;use xlink:href=&quot;#i-settings&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/button&gt;'</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token string">'&lt;button&gt;&lt;p&gt;Foo&lt;/p&gt;&lt;/button&gt;'</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>props</strong>:返回 Wrapper vm 的 props 对象。如果提供了 key，则返回这个 key 对应的值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> wrapper <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+  propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'primary'</span><span class="token punctuation">,</span>
+    icon<span class="token operator">:</span><span class="token string">'settings'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  stubs<span class="token operator">:</span><span class="token punctuation">{</span>  <span class="token comment">//替换功能</span>
+    <span class="token string">'y-icon'</span><span class="token operator">:</span>Icon
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span><span class="token function">props</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Object{type: 'primary', disabled: false, round: false, icon: 'settings', iconPosition: 'left'}</span>
+</code></pre></div><p>注意：我们这里获得的是实例vm的所有的props对象，而不仅仅只是我们自己写的{type,icon}这两个对象。我们写的这两个
+对象会覆盖原来的实例props的默认值而已。
+<strong>setData</strong>：设置vm的data值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> wrapper <span class="token operator">=</span> <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">)</span>
+wrapper<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span> foo<span class="token operator">:</span> <span class="token string">'bar'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span>vm<span class="token punctuation">.</span>foo<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>setProps</strong>：设置vm的props值，并强制更新。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> wrapper <span class="token operator">=</span> <span class="token function">moshallowMountunt</span><span class="token punctuation">(</span>Button<span class="token punctuation">)</span>
+wrapper<span class="token punctuation">.</span><span class="token function">setProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span> foo<span class="token operator">:</span> <span class="token string">'bar'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">.</span>vm<span class="token punctuation">.</span>foo<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>我们同样可以使用传入一个propsData对象来实现初始化设置props值：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> wrapper <span class="token operator">=</span>  <span class="token function">shallowMount</span><span class="token punctuation">(</span>Button<span class="token punctuation">,</span><span class="token punctuation">{</span>
+  propsData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    type<span class="token operator">:</span> <span class="token string">'primary'</span><span class="token punctuation">,</span>
+    icon<span class="token operator">:</span><span class="token string">'settings'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>trigger</strong>：在节点上触发一个事件：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> sinon <span class="token keyword">from</span> <span class="token string">'sinon'</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'trigger demo'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> clickHandler <span class="token operator">=</span> sinon<span class="token punctuation">.</span><span class="token function">stub</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> wrapper <span class="token operator">=</span> <span class="token function">mount</span><span class="token punctuation">(</span>Foo<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    propsData<span class="token operator">:</span> <span class="token punctuation">{</span> clickHandler <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  wrapper<span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">)</span>
+  wrapper<span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    button<span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  wrapper<span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    ctrlKey<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">// 用于测试 @click.ctrl 处理函数</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">await</span> wrapper<span class="token punctuation">.</span>vm<span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 等待事件处理完成</span>
+  <span class="token function">expect</span><span class="token punctuation">(</span>clickHandler<span class="token punctuation">.</span>called<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>事实上，我们很难直接判断一个点击的回调函数是否执行了。这里需要使用sinon来帮助我们判断
+函数是否执行了。对于点击事件这种异步事件，需要等待事件处理完成，下一个nextTick更新后才能够判断。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">await</span> wrapper<span class="token punctuation">.</span>vm<span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 等待事件处理完成</span>
+<span class="token function">expect</span><span class="token punctuation">(</span>clickHandler<span class="token punctuation">.</span>called<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Home/javascript/js/js004.html" class="prev">
+        【004】正向代理和反向代理
+      </a></span> <span class="next"><a href="/Home/javascript/test/test002.html">
+        【002】单元测试之断言——chai
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Home/assets/js/app.4e9de29e.js" defer></script><script src="/Home/assets/js/2.852f0768.js" defer></script><script src="/Home/assets/js/31.a3bef37b.js" defer></script>
+  </body>
+</html>

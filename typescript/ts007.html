@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>类型推断 | 海鹰斯坦的个人主页</title>
+    <meta name="description" content="海鹰斯坦的个人主页">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/Home/assets/css/0.styles.e94f337b.css" as="style"><link rel="preload" href="/Home/assets/js/app.4e9de29e.js" as="script"><link rel="preload" href="/Home/assets/js/2.852f0768.js" as="script"><link rel="preload" href="/Home/assets/js/62.2970193a.js" as="script"><link rel="prefetch" href="/Home/assets/js/10.8473db2b.js"><link rel="prefetch" href="/Home/assets/js/11.b4241947.js"><link rel="prefetch" href="/Home/assets/js/12.b09a44ea.js"><link rel="prefetch" href="/Home/assets/js/13.d63114f0.js"><link rel="prefetch" href="/Home/assets/js/14.0b8be25b.js"><link rel="prefetch" href="/Home/assets/js/15.bd62ea79.js"><link rel="prefetch" href="/Home/assets/js/16.cc1ee14d.js"><link rel="prefetch" href="/Home/assets/js/17.1ef904c7.js"><link rel="prefetch" href="/Home/assets/js/18.e0a82910.js"><link rel="prefetch" href="/Home/assets/js/19.38d174c3.js"><link rel="prefetch" href="/Home/assets/js/20.aa3ff896.js"><link rel="prefetch" href="/Home/assets/js/21.c79e05d9.js"><link rel="prefetch" href="/Home/assets/js/22.da13ae6a.js"><link rel="prefetch" href="/Home/assets/js/23.78c92169.js"><link rel="prefetch" href="/Home/assets/js/24.94b7a7ff.js"><link rel="prefetch" href="/Home/assets/js/25.5b167e5d.js"><link rel="prefetch" href="/Home/assets/js/26.d3807609.js"><link rel="prefetch" href="/Home/assets/js/27.50f8fd8e.js"><link rel="prefetch" href="/Home/assets/js/28.69c4d2e9.js"><link rel="prefetch" href="/Home/assets/js/29.24a2de88.js"><link rel="prefetch" href="/Home/assets/js/3.ab36bc1f.js"><link rel="prefetch" href="/Home/assets/js/30.2c780612.js"><link rel="prefetch" href="/Home/assets/js/31.a3bef37b.js"><link rel="prefetch" href="/Home/assets/js/32.c42a9904.js"><link rel="prefetch" href="/Home/assets/js/33.2fba6d41.js"><link rel="prefetch" href="/Home/assets/js/34.76e04935.js"><link rel="prefetch" href="/Home/assets/js/35.00510acc.js"><link rel="prefetch" href="/Home/assets/js/36.62b6e63f.js"><link rel="prefetch" href="/Home/assets/js/37.42dd3af6.js"><link rel="prefetch" href="/Home/assets/js/38.ce73a544.js"><link rel="prefetch" href="/Home/assets/js/39.f02bc307.js"><link rel="prefetch" href="/Home/assets/js/4.3e212fe4.js"><link rel="prefetch" href="/Home/assets/js/40.5e347b91.js"><link rel="prefetch" href="/Home/assets/js/41.c4785cba.js"><link rel="prefetch" href="/Home/assets/js/42.7b055896.js"><link rel="prefetch" href="/Home/assets/js/43.38197c33.js"><link rel="prefetch" href="/Home/assets/js/44.bad3d004.js"><link rel="prefetch" href="/Home/assets/js/45.e1f5c336.js"><link rel="prefetch" href="/Home/assets/js/46.e4dd4809.js"><link rel="prefetch" href="/Home/assets/js/47.44cdcf1f.js"><link rel="prefetch" href="/Home/assets/js/48.6b0bcf94.js"><link rel="prefetch" href="/Home/assets/js/49.f84d8c11.js"><link rel="prefetch" href="/Home/assets/js/5.c75cc4d2.js"><link rel="prefetch" href="/Home/assets/js/50.62bd8e57.js"><link rel="prefetch" href="/Home/assets/js/51.b9cec1fc.js"><link rel="prefetch" href="/Home/assets/js/52.fc7f7a1a.js"><link rel="prefetch" href="/Home/assets/js/53.b13a962e.js"><link rel="prefetch" href="/Home/assets/js/54.ec6286b0.js"><link rel="prefetch" href="/Home/assets/js/55.7996b340.js"><link rel="prefetch" href="/Home/assets/js/56.97d6f2d9.js"><link rel="prefetch" href="/Home/assets/js/57.0df64cb1.js"><link rel="prefetch" href="/Home/assets/js/58.c30a5bea.js"><link rel="prefetch" href="/Home/assets/js/59.7c9a8b47.js"><link rel="prefetch" href="/Home/assets/js/6.b1439560.js"><link rel="prefetch" href="/Home/assets/js/60.fc89a25b.js"><link rel="prefetch" href="/Home/assets/js/61.3c3dc19e.js"><link rel="prefetch" href="/Home/assets/js/63.95bb274b.js"><link rel="prefetch" href="/Home/assets/js/64.f0d5cf0c.js"><link rel="prefetch" href="/Home/assets/js/65.d6318947.js"><link rel="prefetch" href="/Home/assets/js/66.8eff8ba2.js"><link rel="prefetch" href="/Home/assets/js/67.cfc67837.js"><link rel="prefetch" href="/Home/assets/js/68.2fa4de54.js"><link rel="prefetch" href="/Home/assets/js/69.f6ca426c.js"><link rel="prefetch" href="/Home/assets/js/7.f227c584.js"><link rel="prefetch" href="/Home/assets/js/70.6d1e6835.js"><link rel="prefetch" href="/Home/assets/js/8.f8a0efca.js"><link rel="prefetch" href="/Home/assets/js/9.2c44c2a4.js">
+    <link rel="stylesheet" href="/Home/assets/css/0.styles.e94f337b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Home/" class="home-link router-link-active"><img src="/Home/assets/logo.jpg" alt="海鹰斯坦的个人主页" class="logo"> <span class="site-name can-hide">海鹰斯坦的个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link router-link-active">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link router-link-active">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Typescript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Home/typescript/" class="sidebar-link">目录</a></li><li><a href="/Home/typescript/ts001.html" class="sidebar-link">【001】数据类型</a></li><li><a href="/Home/typescript/ts002.html" class="sidebar-link">【002】函数</a></li><li><a href="/Home/typescript/ts003.html" class="sidebar-link">【003】接口</a></li><li><a href="/Home/typescript/ts004.html" class="sidebar-link">【004】类</a></li><li><a href="/Home/typescript/ts005.html" class="sidebar-link">【005】泛型</a></li><li><a href="/Home/typescript/ts006.html" class="sidebar-link">【006】枚举</a></li><li><a href="/Home/typescript/ts007.html" class="active sidebar-link">【007】类型推论</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Home/typescript/ts008.html" class="sidebar-link">【008】高级类型</a></li><li><a href="/Home/typescript/ts009.html" class="sidebar-link">【009】装饰器</a></li><li><a href="/Home/typescript/ts010.html" class="sidebar-link">【010】tsconfig配置文件</a></li><li><a href="/Home/typescript/ts011.html" class="sidebar-link">【011】发布一个ts编写的npm包</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="类型推断"><a href="#类型推断" class="header-anchor">#</a> 类型推断</h3> <p><code>ts</code>中最重要的就是添加了对数据的类型定义，但是类型究竟是在哪里如何推论出来的了？</p> <h4 id="简单的类型推论"><a href="#简单的类型推论" class="header-anchor">#</a> 简单的类型推论</h4> <p><code>TypeScript</code>里，在有些没有明确指出类型的地方，类型推论会帮助提供类型。比如：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">;</span>
+str <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>  <span class="token comment">// Type '123' is not assignable to type 'string'.</span>
+</code></pre></div><p>当我们在给变量赋值但是没有指定类型的时候，默认类型就是对应的数据类型。变量<code>str</code>的类型被推断为字符串类型。 这种推断发生在初始化变量和成员，设置默认参数值和决定函数返回值时。</p> <h4 id="联合类型"><a href="#联合类型" class="header-anchor">#</a> 联合类型</h4> <p>如果数组或者对象中有多种数据类型，且没有指定类型。那么<code>ts</code>会推断为是这几种数据类型的并集。又称为联合类型。如下所示：</p> <p><img src="/assets/js/ts007-1.png" alt="联合类型">
+数组<code>arr</code>没有指定类型，数组元素数据类型包括<code>number</code>和<code>string</code>类型。那么这个数组的类型就是<code>(number | string[])</code>。联合类型可以赋值给这几种类型，但是不能是这几种以外的类型。</p> <h4 id="上下文类型"><a href="#上下文类型" class="header-anchor">#</a> 上下文类型</h4> <p>前面的类型推断都是根据等号右边的数据类型，来推断等号左边的变量的类型。<code>TypeScript</code>类型推论也可能按照相反的方向进行，即根据等号左边去推断等号右边的类型， 这被叫做“按上下文归类”。按上下文归类会发生在表达式的类型与所处的位置相关时。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>window<span class="token punctuation">.</span><span class="token function-variable function">onmousedown</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">mouseEvent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>mouseEvent<span class="token punctuation">.</span>button<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&lt;- Error</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>这个例子会得到一个类型错误，<code>TypeScript</code>类型检查器使用<code>Window.onmousedown</code>函数的类型来推断右边函数表达式的类型。 因此，就能推断出<code>mouseEvent</code>参数的类型了。 如果函数表达式不是在上下文类型的位置，<code>mouseEvent</code>参数的类型需要指定为<code>any</code>，这样也不会报错了。</p> <h3 id="类型兼容性"><a href="#类型兼容性" class="header-anchor">#</a> 类型兼容性</h3> <p>类型兼容性用于确定一个类型是否能赋值给其他类型，<code>TypeScript</code> 结构化类型系统的基本规则是，如果<code>x</code> 要兼容<code>y</code>，那么<code>y</code>至少具有与<code>x</code>相同的属性。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">interface</span> <span class="token class-name">Info</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span>string
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> info<span class="token operator">:</span>Info<span class="token punctuation">;</span>
+<span class="token comment">// info1和接口Info有相同的属性</span>
+<span class="token keyword">let</span> info1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span><span class="token string">'hello'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// info2中不包含Info中的属性</span>
+<span class="token keyword">let</span> info2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    age<span class="token operator">:</span><span class="token number">14</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// info3中中既包含Info中的属性，还有其他的属性</span>
+<span class="token keyword">let</span> info3 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span><span class="token string">'world'</span><span class="token punctuation">,</span>
+    age<span class="token operator">:</span><span class="token number">15</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+info <span class="token operator">=</span> info1<span class="token punctuation">;</span>  <span class="token comment">// info1中包含属性name能够正常赋值</span>
+info <span class="token operator">=</span> info2<span class="token punctuation">;</span>  <span class="token comment">// 报错,info2中缺少name属性</span>
+info <span class="token operator">=</span> info3<span class="token punctuation">;</span> <span class="token comment">// info3中包含name属性，能够正常赋值。</span>
+</code></pre></div><p>这里检查能否把<code>info1</code>,<code>info2</code>和<code>info3</code>赋值给<code>Info</code>接口类型的<code>obj</code>，编译器检查<code>Info</code>中的每个属性，看是否能在<code>info1</code>,<code>info2</code>和<code>info3</code>中也找到对应属性。 在这个例子中，<code>info1</code>,<code>info2</code>和<code>info3</code>必须包含名字是name的string类型成员。满足条件，才能赋值正确。
+<strong>注意:ts中类型的兼容性是递归式的，也就是说不仅会检查第一层，会检查所有层的属性类型</strong></p> <h4 id="函数的类型兼容性"><a href="#函数的类型兼容性" class="header-anchor">#</a> 函数的类型兼容性</h4> <p>在考虑函数的兼容性的时候，需要考虑更多的东西，比如参数个数，参数类型，可选参数与剩余参数。</p> <ul><li><strong>参数个数</strong></li></ul> <p>要查看函数<code>x</code>是否能赋值给函数<code>y</code>，首先看它们的参数列表<code>x</code>的每个参数必须能在<code>y</code>里找到对应类型的参数，注意的是参数的名字相同与否无所谓，只看它们的类型。而且<code>x</code>的参数个数必须小于等于<code>y</code>的参数个数。
+示例：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> <span class="token function-variable function">x</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token operator">:</span>number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token function-variable function">y</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">b<span class="token operator">:</span>number<span class="token punctuation">,</span>c<span class="token operator">:</span>string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token comment">// 函数赋值</span>
+y <span class="token operator">=</span> x<span class="token punctuation">;</span> <span class="token comment">// 正确赋值</span>
+x <span class="token operator">=</span> y<span class="token punctuation">;</span> <span class="token comment">// 无法赋值</span>
+</code></pre></div><p>函数<code>x</code>的参数列表的每个参数都能够在函数<code>y</code>中找到(<code>x</code>的参数个数小于等于<code>y</code>的参数个数)，因此x能够正常赋值给<code>y</code>。但是函数<code>y</code>的参数为2个，而函数<code>x</code>的参数只有一个，因此<code>y</code>的参数列表中的参数，不能都在x的参数列表中找到，因此y不能赋值给x。这有点类似于我们定义了一个函数，里面有3个参数，你可以只传一个。</p> <ul><li><strong>参数类型</strong></li></ul> <p>函数的参数类型必须一致，才能够正常赋值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> <span class="token function-variable function">x</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token operator">:</span>number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> <span class="token function-variable function">y</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token operator">:</span>string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+y <span class="token operator">=</span> x<span class="token punctuation">;</span>  <span class="token comment">//参数类型不一致  Types of parameters 'a' and 'a' are incompatible.</span>
+</code></pre></div><ul><li><strong>可选参数与剩余参数</strong></li></ul> <p>当包含可选参数时，目标函数里没有相对应的类型也是不报错的。比如，当存在args参数时，我们可以使用任意个数的参数，只要类型符合即可。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> getSum <span class="token operator">=</span> <span class="token punctuation">(</span>arr<span class="token operator">:</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token function-variable function">callback</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args<span class="token operator">:</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> number<span class="token punctuation">)</span><span class="token operator">:</span><span class="token parameter">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> res1 <span class="token operator">=</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token operator">:</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token parameter">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> args<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> a<span class="token operator">+</span>b<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> res2 <span class="token operator">=</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">(</span>arg1<span class="token punctuation">,</span>arg2<span class="token punctuation">,</span>arg3<span class="token punctuation">)</span><span class="token operator">:</span><span class="token parameter">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> arg1 <span class="token operator">+</span> arg2 <span class="token operator">+</span> arg3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li><strong>函数参数双向协变</strong></li></ul> <p>所谓函数参数双向协变，是指函数参数中包含联合类型时如何赋值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span>  x <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token operator">:</span><span class="token punctuation">(</span>number <span class="token operator">|</span> string<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">:</span><span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span>  y <span class="token operator">=</span> <span class="token punctuation">(</span>b<span class="token operator">:</span>number<span class="token punctuation">)</span><span class="token operator">:</span><span class="token parameter"><span class="token keyword">void</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+y <span class="token operator">=</span> x<span class="token punctuation">;</span>
+x <span class="token operator">=</span> y<span class="token punctuation">;</span><span class="token comment">// error Type 'string' is not assignable to type 'number'.</span>
+</code></pre></div><p>函数<code>x</code>中参数类型为联合类型，既可以接收<code>string</code>类型，又可以接收<code>number</code>，而函数<code>y</code>参数只能接收<code>number</code>类型，因此，函数<code>x</code>可以赋值给<code>y</code>,它可以接收<code>y</code>的所有参数。但是<code>y</code>不能赋值给<code>x</code>,因为它无法接收<code>string</code>类型的数据，相当于把原来的参数类型范围缩小了。</p> <ul><li><strong>返回值类型</strong></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>string <span class="token operator">|</span> <span class="token parameter">number</span> <span class="token operator">=&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> y <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token parameter">string</span> <span class="token operator">=&gt;</span> <span class="token string">'a'</span><span class="token punctuation">;</span>
+x <span class="token operator">=</span> y<span class="token punctuation">;</span>  <span class="token comment">// 可以赋值</span>
+y <span class="token operator">=</span> x<span class="token punctuation">;</span>  <span class="token comment">// 不可以赋值</span>
+</code></pre></div><p>类型系统强制源函数<code>y</code>的返回值类型必须是目标函数<code>x</code>返回值类型的子类型。</p> <h4 id="枚举的类型兼容性"><a href="#枚举的类型兼容性" class="header-anchor">#</a> 枚举的类型兼容性</h4> <p>数值枚举类型与数字类型兼容，数字类型与枚举类型兼容也就是说如果枚举类型是数值类型的，那么可以直接给他赋值数字。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">enum</span> Status <span class="token punctuation">{</span>
+    Success<span class="token punctuation">,</span>
+    Error
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> s <span class="token operator">=</span> Status<span class="token punctuation">.</span>Success<span class="token punctuation">;</span>
+s <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>  <span class="token comment">// 数字1可以看成是Status.Success类型</span>
+</code></pre></div><p>但是枚举类型与枚举类型之间是不兼容的。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">enum</span> Status <span class="token punctuation">{</span>
+    Success<span class="token punctuation">,</span>
+    Error
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> s <span class="token operator">=</span> Status<span class="token punctuation">.</span>Success<span class="token punctuation">;</span>
+s <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">enum</span> Progress <span class="token punctuation">{</span>
+    Start<span class="token punctuation">,</span>
+    End
+<span class="token punctuation">}</span>
+s <span class="token operator">=</span> Progress<span class="token punctuation">.</span>Start<span class="token punctuation">;</span>  <span class="token comment">//error Type 'Progress.Start' is not assignable to type 'Status'</span>
+</code></pre></div><p><code>Progress.Start</code>作为另一个枚举成员的类型，不能直接看做是<code>Status</code>类型。也就是说，我们不要用一个枚举成员类型来给另一个枚举成员赋值。</p> <h4 id="类的类型兼容性"><a href="#类的类型兼容性" class="header-anchor">#</a> 类的类型兼容性</h4> <p>类作为类型使用时，实际上只比较实例的属性是否符合要求，也就是类中<code>constructor</code>中的属性
+是否符合类型，对于通过<code>static</code>定义的静态属性不会做检查。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">AnimalClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> age<span class="token operator">:</span>number<span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">public</span> name<span class="token operator">:</span>string</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">PeopleClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> age<span class="token operator">:</span>string<span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">public</span> name<span class="token operator">:</span>string</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">FoodClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> age<span class="token operator">:</span>number<span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">public</span> name<span class="token operator">:</span>number</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 将类作为类型使用时，实际上是将类的实例来作为类型使用。</span>
+<span class="token keyword">let</span> animals<span class="token operator">:</span>AnimalClass<span class="token punctuation">;</span>
+<span class="token keyword">let</span> peop<span class="token operator">:</span>PeopleClass<span class="token punctuation">;</span>
+<span class="token keyword">let</span> food<span class="token operator">:</span>FoodClass<span class="token punctuation">;</span>
+
+animals <span class="token operator">=</span> peop<span class="token punctuation">;</span> <span class="token comment">// 虽然static定义的类型不一致，但是constructor中的实例成员一致，因此可以赋值。</span>
+animals <span class="token operator">=</span> food<span class="token punctuation">;</span> <span class="token comment">// 虽然static定义的类型一致，但是constructor中的实例成员不一致，因此不能赋值。</span>
+</code></pre></div><p><strong>类的私有成员和受保护成员</strong>
+类的私有成员和受保护成员会影响兼容性。当检查类实例的兼容时，如果目标类型包含一个私有成员，那么源类型必须包含来自同一个类的这个私有成员。 同样地，这条规则也适用于包含受保护成员实例的类型检查。 这允许子类赋值给父类，但是不能赋值给其它有同样类型的类。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Home/typescript/ts006.html" class="prev">
+        【006】枚举
+      </a></span> <span class="next"><a href="/Home/typescript/ts008.html">
+        【008】高级类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Home/assets/js/app.4e9de29e.js" defer></script><script src="/Home/assets/js/2.852f0768.js" defer></script><script src="/Home/assets/js/62.2970193a.js" defer></script>
+  </body>
+</html>

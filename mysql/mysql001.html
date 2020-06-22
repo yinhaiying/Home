@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL入门之库表操作 | 海鹰斯坦的个人主页</title>
+    <meta name="description" content="海鹰斯坦的个人主页">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/Home/assets/css/0.styles.e94f337b.css" as="style"><link rel="preload" href="/Home/assets/js/app.4e9de29e.js" as="script"><link rel="preload" href="/Home/assets/js/2.852f0768.js" as="script"><link rel="preload" href="/Home/assets/js/42.7b055896.js" as="script"><link rel="prefetch" href="/Home/assets/js/10.8473db2b.js"><link rel="prefetch" href="/Home/assets/js/11.b4241947.js"><link rel="prefetch" href="/Home/assets/js/12.b09a44ea.js"><link rel="prefetch" href="/Home/assets/js/13.d63114f0.js"><link rel="prefetch" href="/Home/assets/js/14.0b8be25b.js"><link rel="prefetch" href="/Home/assets/js/15.bd62ea79.js"><link rel="prefetch" href="/Home/assets/js/16.cc1ee14d.js"><link rel="prefetch" href="/Home/assets/js/17.1ef904c7.js"><link rel="prefetch" href="/Home/assets/js/18.e0a82910.js"><link rel="prefetch" href="/Home/assets/js/19.38d174c3.js"><link rel="prefetch" href="/Home/assets/js/20.aa3ff896.js"><link rel="prefetch" href="/Home/assets/js/21.c79e05d9.js"><link rel="prefetch" href="/Home/assets/js/22.da13ae6a.js"><link rel="prefetch" href="/Home/assets/js/23.78c92169.js"><link rel="prefetch" href="/Home/assets/js/24.94b7a7ff.js"><link rel="prefetch" href="/Home/assets/js/25.5b167e5d.js"><link rel="prefetch" href="/Home/assets/js/26.d3807609.js"><link rel="prefetch" href="/Home/assets/js/27.50f8fd8e.js"><link rel="prefetch" href="/Home/assets/js/28.69c4d2e9.js"><link rel="prefetch" href="/Home/assets/js/29.24a2de88.js"><link rel="prefetch" href="/Home/assets/js/3.ab36bc1f.js"><link rel="prefetch" href="/Home/assets/js/30.2c780612.js"><link rel="prefetch" href="/Home/assets/js/31.a3bef37b.js"><link rel="prefetch" href="/Home/assets/js/32.c42a9904.js"><link rel="prefetch" href="/Home/assets/js/33.2fba6d41.js"><link rel="prefetch" href="/Home/assets/js/34.76e04935.js"><link rel="prefetch" href="/Home/assets/js/35.00510acc.js"><link rel="prefetch" href="/Home/assets/js/36.62b6e63f.js"><link rel="prefetch" href="/Home/assets/js/37.42dd3af6.js"><link rel="prefetch" href="/Home/assets/js/38.ce73a544.js"><link rel="prefetch" href="/Home/assets/js/39.f02bc307.js"><link rel="prefetch" href="/Home/assets/js/4.3e212fe4.js"><link rel="prefetch" href="/Home/assets/js/40.5e347b91.js"><link rel="prefetch" href="/Home/assets/js/41.c4785cba.js"><link rel="prefetch" href="/Home/assets/js/43.38197c33.js"><link rel="prefetch" href="/Home/assets/js/44.bad3d004.js"><link rel="prefetch" href="/Home/assets/js/45.e1f5c336.js"><link rel="prefetch" href="/Home/assets/js/46.e4dd4809.js"><link rel="prefetch" href="/Home/assets/js/47.44cdcf1f.js"><link rel="prefetch" href="/Home/assets/js/48.6b0bcf94.js"><link rel="prefetch" href="/Home/assets/js/49.f84d8c11.js"><link rel="prefetch" href="/Home/assets/js/5.c75cc4d2.js"><link rel="prefetch" href="/Home/assets/js/50.62bd8e57.js"><link rel="prefetch" href="/Home/assets/js/51.b9cec1fc.js"><link rel="prefetch" href="/Home/assets/js/52.fc7f7a1a.js"><link rel="prefetch" href="/Home/assets/js/53.b13a962e.js"><link rel="prefetch" href="/Home/assets/js/54.ec6286b0.js"><link rel="prefetch" href="/Home/assets/js/55.7996b340.js"><link rel="prefetch" href="/Home/assets/js/56.97d6f2d9.js"><link rel="prefetch" href="/Home/assets/js/57.0df64cb1.js"><link rel="prefetch" href="/Home/assets/js/58.c30a5bea.js"><link rel="prefetch" href="/Home/assets/js/59.7c9a8b47.js"><link rel="prefetch" href="/Home/assets/js/6.b1439560.js"><link rel="prefetch" href="/Home/assets/js/60.fc89a25b.js"><link rel="prefetch" href="/Home/assets/js/61.3c3dc19e.js"><link rel="prefetch" href="/Home/assets/js/62.2970193a.js"><link rel="prefetch" href="/Home/assets/js/63.95bb274b.js"><link rel="prefetch" href="/Home/assets/js/64.f0d5cf0c.js"><link rel="prefetch" href="/Home/assets/js/65.d6318947.js"><link rel="prefetch" href="/Home/assets/js/66.8eff8ba2.js"><link rel="prefetch" href="/Home/assets/js/67.cfc67837.js"><link rel="prefetch" href="/Home/assets/js/68.2fa4de54.js"><link rel="prefetch" href="/Home/assets/js/69.f6ca426c.js"><link rel="prefetch" href="/Home/assets/js/7.f227c584.js"><link rel="prefetch" href="/Home/assets/js/70.6d1e6835.js"><link rel="prefetch" href="/Home/assets/js/8.f8a0efca.js"><link rel="prefetch" href="/Home/assets/js/9.2c44c2a4.js">
+    <link rel="stylesheet" href="/Home/assets/css/0.styles.e94f337b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Home/" class="home-link router-link-active"><img src="/Home/assets/logo.jpg" alt="海鹰斯坦的个人主页" class="logo"> <span class="site-name can-hide">海鹰斯坦的个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link router-link-exact-active router-link-active">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Home/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/javascript/js/js001.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/typescript/" class="nav-link">
+  Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/Home/vue/vue001.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Home/react/react001.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/Home/node/node001.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/Home/design-pattern/dm001.html" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/php/php001.html" class="nav-link">
+  PHP
+</a></li><li class="dropdown-item"><!----> <a href="/Home/mysql/mysql001.html" class="nav-link router-link-exact-active router-link-active">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Home/computer-net/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/Home/operate-system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/Home/data-structure/" class="nav-link">
+  数据结构和算法
+</a></li></ul></div></div><div class="nav-item"><a href="/Home/program/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="/Home/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/Home/leetcode/" class="nav-link">
+  Leetcode
+</a></div><div class="nav-item"><a href="/Home/tools/tools/tools001.html" class="nav-link">
+  常用网站及工具
+</a></div> <a href="https://github.com/yinhaiying/Home" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>MySQL</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Home/mysql/mysql001.html" class="active sidebar-link">【001】mysql入门（一）库表操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Home/mysql/mysql001.html#连接数据库" class="sidebar-link">连接数据库</a></li><li class="sidebar-sub-header"><a href="/Home/mysql/mysql001.html#sql语句的分类" class="sidebar-link">SQL语句的分类</a></li><li class="sidebar-sub-header"><a href="/Home/mysql/mysql001.html#数据库的操作" class="sidebar-link">数据库的操作</a></li><li class="sidebar-sub-header"><a href="/Home/mysql/mysql001.html#数据表的操作" class="sidebar-link">数据表的操作</a></li><li class="sidebar-sub-header"><a href="/Home/mysql/mysql001.html#创建数据表" class="sidebar-link">创建数据表</a></li><li class="sidebar-sub-header"><a href="/Home/mysql/mysql001.html#删除数据表" class="sidebar-link">删除数据表</a></li><li class="sidebar-sub-header"><a href="/Home/mysql/mysql001.html#修改表" class="sidebar-link">修改表</a></li><li class="sidebar-sub-header"><a href="/Home/mysql/mysql001.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/Home/mysql/mysql002.html" class="sidebar-link">【002】mysql的使用注意事项</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql入门之库表操作"><a href="#mysql入门之库表操作" class="header-anchor">#</a> MySQL入门之库表操作</h1> <p><img src="https://imgkr.cn-bj.ufileos.com/28827387-1a3b-4041-9804-b1071d3ee24c.png" alt="思维导图"></p> <h2 id="连接数据库"><a href="#连接数据库" class="header-anchor">#</a> 连接数据库</h2> <p>MySQL下载之后，我们将它添加到全局path中，这样我们就可以在任何地方使用MySQL的命令了。添加方式如下：电脑 &gt; 属性 &gt; 高级(环境变量) &gt; Path(新建) &gt; 将MySQL的bin文件添加到表格中即可。
+<img src="https://imgkr.cn-bj.ufileos.com/7d8d4bdf-0b25-412f-bb60-dfdab7c62b68.png" alt="path">
+添加了全局路径之后我们就可以使用MySQL指令连接数据库，最简单的连接方式就是：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>mysql <span class="token operator">-</span>uroot <span class="token operator">-</span>p
+</code></pre></div><p>-u表示username用户名，通常默认为root;-p表示password用户密码，默认为空。在这里直接enter之后会提示你输入密码，输入为空即可，出现如下页面则表示连接成功。
+<img src="https://imgkr.cn-bj.ufileos.com/6f4cffe2-00c8-4f8e-9592-646b35c15c20.png" alt="连接数据库"></p> <h2 id="sql语句的分类"><a href="#sql语句的分类" class="header-anchor">#</a> SQL语句的分类</h2> <p>在学习数据库的各种操作之前，我们先了解一下常见的SQL语句分类，不同的分类有不同的关键字，同样的创建和删除针对不同的对象比如库和字段记录就具有不同的关键字，通过了解这些分类，可以方便我们记忆和使用。
+SQL语句主要可以分为以下三类：</p> <ol><li>DDL(Data Definition Languages)语句：数据定义语句，这些语句定义了不同的数据段、数据库、表、列和索引等数据库对象。常用的语句关键字主要包括：create、drop和alter等。更加通俗地理解：它主要操作大的对象，比如数据库，数据表等。</li> <li>DML(Data manipulation Language)语句：数据操纵语句，用于添加、删除、更新和查询数据库记录，并检查数据完整性。常用的语句关键字主要包括insert、delete、update和select等。更加通俗地理解：它就是操作小的数据（主要针对的是数据），比如数据表中的一条数据。</li> <li>DCL(Data Control Language)语句：数据控制语句，用于控制不同数据段直接的许可和访问级别的语句。这些语句定义了数据库、表、字段和用户的访问权限和安全级别。主要的语句关键字包括grant、revoke等。</li></ol> <p>从上面的分类可以看出，我们今天要讲的库表的操作属于数据定义语句(DDL)，使用的主要关键字就是<code>create</code>,<code>drop</code>和<code>alter</code>。</p> <h2 id="数据库的操作"><a href="#数据库的操作" class="header-anchor">#</a> 数据库的操作</h2> <p>数据库的创建查看删除操作语法：</p> <div class="language-sql extra-class"><pre class="language-sql"><code>创建：<span class="token keyword">create</span> <span class="token keyword">database</span> dbname<span class="token punctuation">;</span>
+查看数据库:<span class="token keyword">show</span> <span class="token keyword">databases</span><span class="token punctuation">;</span>
+进入数据库:<span class="token keyword">use</span> <span class="token keyword">database</span><span class="token punctuation">;</span>
+删除数据库：<span class="token keyword">drop</span> <span class="token keyword">database</span><span class="token punctuation">;</span>
+</code></pre></div><p>从上面我们可以看出，数据库的创建和删除操作使用的关键字就是create和drop，这跟我们在上面说的DDL语句关键字一致。这些语句的操作过程如下：
+<img src="https://imgkr.cn-bj.ufileos.com/10472508-9d2f-4e77-8f14-125133969e25.png" alt="数据库的操作"></p> <h2 id="数据表的操作"><a href="#数据表的操作" class="header-anchor">#</a> 数据表的操作</h2> <p>数据表的操作同样涉及到增删改查。</p> <h2 id="创建数据表"><a href="#创建数据表" class="header-anchor">#</a> 创建数据表</h2> <p>在创建一个数据库之后，对于关系型数据库，接下来我们需要定义一个表，表的创建语法如下：</p> <div class="language- extra-class"><pre class="language-text"><code>create table tablename(column_name1 columntype,column_name2 columntype);
+</code></pre></div><p>查看具体的使用：
+<img src="https://imgkr.cn-bj.ufileos.com/9f7ddec6-747a-48b6-a809-bf940fe2b47e.png" alt="表的创建">
+在创建了表之后，我们可以使用<code>desc tablename</code>来查看表的结构，具有哪些字段，设置了哪些属性。</p> <h2 id="删除数据表"><a href="#删除数据表" class="header-anchor">#</a> 删除数据表</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">drop</span> <span class="token keyword">table</span> tablename
+</code></pre></div><p>删除数据表我们同样使用关键字drop。</p> <h2 id="修改表"><a href="#修改表" class="header-anchor">#</a> 修改表</h2> <p>表的修改主要包括两个方面，一方面是修改表本身，包括修改表的名字，修改表的字符集等信息,通常我们很少去修改字符集。</p> <h3 id="修改表的名字"><a href="#修改表的名字" class="header-anchor">#</a> 修改表的名字</h3> <p>修改表名我们使用<code>rename</code>关键字，具体的语法如下：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">rename</span> <span class="token keyword">table</span> 旧表名 <span class="token keyword">to</span> 新表名
+</code></pre></div><p><img src="https://imgkr.cn-bj.ufileos.com/4294370b-de49-4ae6-8ac5-ad8c8cb4c738.png" alt="重命名表">
+上图中，我们将表的名字从student修改为person。查看数据表可以发现修改成功。</p> <h3 id="修改表中字段"><a href="#修改表中字段" class="header-anchor">#</a> 修改表中字段</h3> <p>修改表中的字段主要包括：新增字段，删除字段，修改字段数据类型和重命名字段等。修改字段主要使用关键字<code>alter</code>。</p> <h4 id="新增字段"><a href="#新增字段" class="header-anchor">#</a> 新增字段</h4> <p>我们在创建一个数据表的时候，可能不会把所有字段都写全，这时候我们就需要向表中增加字段了。新增字段的语法如下：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">add</span> <span class="token keyword">column</span> 字段名称 字段类型 <span class="token punctuation">[</span><span class="token keyword">first</span><span class="token operator">|</span><span class="token keyword">after</span>字段名称<span class="token punctuation">]</span>
+</code></pre></div><p><img src="https://imgkr.cn-bj.ufileos.com/08231a4c-4184-4843-9adc-8b6c91d4b8c3.png" alt="">
+上图中，我们创建的student表只有name,age和sex三个字段。接下来我们通过alter table student add column id int(10);添加了一个id字段。接下来我们在查看发现表中已经新增了一列id字段了。</p> <h4 id="删除字段"><a href="#删除字段" class="header-anchor">#</a> 删除字段</h4> <p>删除字段的语法如下：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">drop</span> 字段名<span class="token punctuation">;</span>
+</code></pre></div><p><img src="https://imgkr.cn-bj.ufileos.com/36b51ac3-6c30-48a9-89aa-8091088e8cde.png" alt="">
+从图中我们可以看出，通过alter table student drop id我们删除了id字段。</p> <h4 id="修改字段数据类型"><a href="#修改字段数据类型" class="header-anchor">#</a> 修改字段数据类型</h4> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 <span class="token keyword">modify</span> 字段名 修改后的数据类型
+</code></pre></div><p><img src="https://imgkr.cn-bj.ufileos.com/e8edff4d-1c17-4ea5-a3c4-62fa54c40748.png" alt="">
+修改表中字段类型通过modify关键字。</p> <h4 id="重命名字段"><a href="#重命名字段" class="header-anchor">#</a> 重命名字段</h4> <p>有些时候我们需要修改字段的名字，我们当然可以先删除这个字段然后重新添加一个字段，但是这涉及到数据的迁移，因此这种方法并不可取。SQL同样提供了语法来实现这个功能，语法如下：</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名 change 原来的字段名 修改后的字段名 修改后的字段数据类型
+</code></pre></div><p><img src="https://imgkr.cn-bj.ufileos.com/47f74afd-a0d1-4351-8ab1-95aa13040a3d.png" alt="">
+上图中，我们通过alter table student change gender sex varchar(2)语句，将gender字段修改为了sex字段。</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>本篇文章中，我们主要介绍了如下内容：<br></p> <ol><li>数据库的连接</li> <li>数据库的创建、查看和删除等操作</li> <li>数据表的操作：数据表的创建，查看，删除和修改操作。其中修改操作主要包括修改表本身和修改表中字段。</li> <li>数据库的库和表操作使用到的关键字主要包括：<code>create</code>,<code>drop</code>,<code>alter</code>等</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/Home/mysql/mysql002.html">
+        【002】mysql的使用注意事项
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Home/assets/js/app.4e9de29e.js" defer></script><script src="/Home/assets/js/2.852f0768.js" defer></script><script src="/Home/assets/js/42.7b055896.js" defer></script>
+  </body>
+</html>
